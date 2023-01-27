@@ -19,12 +19,7 @@ CREATE TABLE Evento(
 	id_evento int auto_increment PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     tipo VARCHAR(100) NOT NULL,
-    ano int(4) NOT NULL,
-    anos_anteriores VARCHAR(5000), /*vi que não tem como colocar arraylist, só um grande texto*/
-    descricao VARCHAR(500) NOT NULL,
     area_de_estudo VARCHAR(100) NOT NULL,
-    link_evento VARCHAR (100) NOT NULL,
-    autorizado bool NOT NULL,
     id_usuario int,
     
     FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
@@ -36,6 +31,16 @@ CREATE TABLE CadastradorEvento(
     anfitriao bool NOT NULL,
     
     FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),
+    FOREIGN KEY (id_evento) REFERENCES Evento(id_evento)
+);
+
+CREATE TABLE AnoEvento(
+	id_evento int,
+    ano int NOT NULL,
+	descricao VARCHAR(1000) NOT NULL,
+	link_evento VARCHAR(200) NOT NULL,
+    autorizado bool NOT NULL,
+    
     FOREIGN KEY (id_evento) REFERENCES Evento(id_evento)
 );
 
@@ -57,10 +62,8 @@ CREATE TABLE Artigo(
     titulo VARCHAR(100) NOT NULL,
     subtitulo VARCHAR(100) NOT NULL,
     descricao VARCHAR(500) NOT NULL,
-    palavras_chave VARCHAR(5000),
     data_de_publicacao DATETIME NOT NULL,
     arquivo MEDIUMBLOB NOT NULL,
-    autores VARCHAR(5000) NOT NULL,
     idioma VARCHAR(100) NOT NULL,
     resumo VARCHAR(1000) NOT NULL,
     num_paginas int NOT NULL,
@@ -70,6 +73,13 @@ CREATE TABLE Artigo(
     id_evento int,
     
     FOREIGN KEY (id_evento) REFERENCES Evento(id_evento)
+);
+
+CREATE TABLE PalavraChave(
+	id_autor int,
+    palavra_chave VARCHAR(100),
+    
+    FOREIGN KEY (id_autor) REFERENCES Artigo(id_artigo)
 );
 
 CREATE TABLE Tema(
