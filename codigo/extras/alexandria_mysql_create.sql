@@ -1,3 +1,6 @@
+CREATE DATABASE Alexandria;
+USE Alexandria;
+
 CREATE TABLE `Usuario` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
