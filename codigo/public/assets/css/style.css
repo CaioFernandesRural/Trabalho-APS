@@ -36,7 +36,7 @@ input#barra_pesquisa
     background-color: #FFFFFF;
     border-radius: 0px 10px 10px 0px;
     border: none;
-    padding: 5px;
+    padding: 4px;
     cursor: pointer;
     position: relative;
     float: right;
@@ -44,7 +44,8 @@ input#barra_pesquisa
 }
 
 #icon_lupa{
-    max-width: 47%;
+    margin-top: 3px;
+    max-width: 44%;
 }
 
 #cards_eventos{
@@ -54,13 +55,13 @@ input#barra_pesquisa
 }
 
 #icon_person{
-    width: 3%;
-    height: 3%;
+    width: 2.5%;
+    height: 2.5%;
     cursor: pointer;
 }
 
 nav{
-    background-color: #D9D9D9;
+    background-color: #EFEFEF;
     color: #663399;
     justify-content: space-around;
     padding: 0.8%;
@@ -76,7 +77,7 @@ nav{
 }
 
 #evento{
-    background-color: #D9D9D9;
+    background-color: #EFEFEF;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -95,33 +96,6 @@ nav{
 
 #nome_cadastrador{
     text-decoration: underline;
-}
-
-#titulo_filtro{
-    background-color: #663399;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 5%;
-    border: none;
-    border-radius: 10px 10px 0px 0px;
-    font-weight: 300;
-    font-size: 20px;
-}
-
-#filtro{
-    background-color: #D9D9D9;
-    border: none;
-    border-radius: 5%;
-    height: 510px;
-    width: 20%;
-}
-
-#form_filtro{
-    padding: 10px;
-}
-
-#form_filtro input{
-    margin-top: 25px;
 }
 
 footer{

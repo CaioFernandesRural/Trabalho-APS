@@ -1,0 +1,25 @@
+#titulo_filtro{
+    background-color: #663399;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5%;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#filtro{
+    background-color: #EFEFEF;
+    border: none;
+    border-radius: 5%;
+    width: 20%;
+}
+
+#form_filtro{
+    padding: 10px;
+}
+
+#form_filtro input{
+    margin-bottom: 15px;
+}
