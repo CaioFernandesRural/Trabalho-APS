@@ -1,0 +1,45 @@
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #EFEFEF;
+    justify-items: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    padding: 4%;
+    border: none;
+    border-radius: 10px;
+}
+
+#icon_login{
+    max-width: 30%;
+    margin-bottom: 30px;
+}
+
+.icons_login{
+    max-width: 10%;
+    border-right: 1px solid #d9d9d9;
+    padding-right: 5px;
+}
+
+
+
+label{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+input{
+    border: none;
+    width: 230px;
+}
