@@ -20,6 +20,8 @@ CREATE TABLE `Evento` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
 	`area_de_estudo` varchar(255) NOT NULL,
+	`tipo`: enum('Congresso', 'Encontro', 'Seminário', 'Mesa-redonda', 'Simpósio', 'Painel',
+	'Fórum', 'Conferência', 'Jornada', 'Cursos', 'Colóquio', 'Semana', 'Workshop'),
 	`id_cadastrador` int NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -62,7 +64,7 @@ CREATE TABLE `OrganizadorEvento` (
 
 CREATE TABLE `Tema` (
 	`id` int NOT NULL AUTO_INCREMENT,
-	`descricao` varchar(255) NOT NULL,
+	`titulo` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -76,7 +78,6 @@ CREATE TABLE `Artigo` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`titulo` varchar(255) NOT NULL,
 	`subtitulo` varchar(255) NOT NULL,
-	`descricao` varchar(255) NOT NULL,
 	`data_de_publicacao` DATETIME NOT NULL,
 	`idioma` varchar(255) NOT NULL,
 	`resumo` varchar(255) NOT NULL,
