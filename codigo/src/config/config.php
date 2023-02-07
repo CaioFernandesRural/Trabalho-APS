@@ -11,10 +11,9 @@ define('VIEW_PATH', realpath(dirname(__FILE__) . '/../views'));
 define('TEMPLATE_PATH', realpath(dirname(__FILE__) . '/../views/template'));
 define('CONTROLLER_PATH', realpath(dirname(__FILE__) . '/../controllers'));
 define('EXCEPTION_PATH', realpath(dirname(__FILE__) . '/../exceptions'));
-define('ASSETS_PATH', realpath(dirname(__FILE__) . '/../../public/assets'));
 
 //Arquivos
-#require_once(realpath(dirname(__FILE__) . '/database.php'));
+require_once(realpath(dirname(__FILE__) . '/database.php'));
 require_once(realpath(dirname(__FILE__) . '/loader.php'));
 #require_once(realpath(dirname(__FILE__) . '/session.php'));
 #require_once(realpath(MODEL_PATH . '/Model.php'));
