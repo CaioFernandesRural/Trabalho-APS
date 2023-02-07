@@ -18,12 +18,12 @@
             <form id="form_login">
                 <label>
                     <img src="./img/email.png" class="icons_login">
-                    <input type="text" id="email" placeholder="E-mail">
+                    <input type="email" id="email" name="email" placeholder="E-mail">
                 </label>
                 <br>
                 <label>
                     <img src="./img/senha.png" class="icons_login">
-                    <input type="text" id="senha" placeholder="●●●●●">
+                    <input type="password" id="senha" name="senha" placeholder="●●●●●">
                 </label>
             </form>
             <p>Não tem uma conta? <a>Inscreva-se</a></p>

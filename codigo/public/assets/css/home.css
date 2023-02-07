@@ -1,3 +1,12 @@
+#conteudo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    justify-content: space-around;
+    gap:10%;
+    margin-left: 10%;
+}
+
 #titulo_filtro{
     background-color: #663399;
     color: #FFFFFF;
