@@ -48,7 +48,7 @@ input#barra_pesquisa
     max-width: 44%;
 }
 
-#cards_eventos{
+.cards_eventos{
     display: flex;
     flex-direction: column;
     gap: 10%;
@@ -67,16 +67,7 @@ nav{
     padding: 0.8%;
 }
 
-#conteudo{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5%;
-    justify-content: space-around;
-    gap:10%;
-    margin-left: 10%;
-}
-
-#evento{
+.evento{
     background-color: #EFEFEF;
     display: flex;
     flex-direction: column;
@@ -87,14 +78,14 @@ nav{
     width: 70%;
 }
 
-#nome_evento{
+.nome_evento{
     color: #3366CC;
     font-weight: 500;
     font-size: 30px;
     cursor: pointer;
 }
 
-#nome_cadastrador{
+.nome_cadastrador{
     text-decoration: underline;
 }
 
@@ -107,4 +98,62 @@ footer{
     text-align: center;
     margin-top: 5%;
     width: 100%;
+}
+
+.form_container{
+    display: flex;
+    flex-direction: row;
+    gap:10%;
+    margin-left: 10%;
+}
+
+.div_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro{
+    background-color: #EFEFEF;
+    padding: 2%;
+    width: 40%;
+    margin-left: 32%;
+    border-radius: 10px;
+}
+
+.div_form input, .div_form select{
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+}
+ .titulo_cadastro{
+    text-align: center;
+    margin-left: -200px;
+    margin-top: 5%;
+    font-size: 30px;
+ }
+
+ .btn_cancela{
+    margin-left: 60%;
+    background-color: #000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+ }
+ .btn_salva{
+    background-color: #663399;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+ }
+.btn_cancela, .btn_salva{
+    margin-top: 10px;
+}
+ #descricao_evento{
+    height: 100px;
+}
+
+#descricao_artigo{
+    height: 50px;
 }
