@@ -13,6 +13,18 @@ abstract class Pessoa {
         $this->loadFromArray($arr, $sanitize);
     }
 
+    //métodos mágicos
+    public function __get($key){
+        return $this->values[$key];
+    }
+    public function __set($key, $value){
+        $this->values[$key] = $value;
+    }
+
+    public function getValues(){
+        return $this->values;
+    }
+
     //carrega o objeto a partir de um array, tenta trabalhar com valores "limpos"
     public function loadFromArray($arr, $sanitize = true){
         if ($arr){
@@ -28,18 +40,6 @@ abstract class Pessoa {
             }
             #$conn->close();
         }
-    }
-
-    //métodos mágicos
-    public function __get($key){
-        return $this->values[$key];
-    }
-    public function __set($key, $value){
-        $this->values[$key] = $value;
-    }
-
-    public function getValues(){
-        return $this->values;
     }
 
     public function getOne($filters, $columns = '*'){
@@ -128,7 +128,7 @@ abstract class Pessoa {
         if (is_null($value)){
             return "null";
         } elseif (gettext($value) == 'string'){
-            return "'${value}'";
+            return "'{$value}'";
         } else {
             return $value;
         }
