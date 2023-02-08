@@ -1,5 +1,5 @@
 <?php
 session_start();
-#requireValidSession();
+requireValidSession();
 
 loadTemplateView('home');
