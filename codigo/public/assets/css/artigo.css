@@ -1,0 +1,38 @@
+#h1_artigo{
+    margin-right: 0;
+    margin-left: -16%;
+}
+#conteudo_artigo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#titulo_resumo{
+    border: 1px solid #D9D9D9;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+}
+
+#resumo{
+    border: 1px solid #D9D9D9;
+}
+
+#titulo_detalhe{
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.p_detalhe{
+    margin-bottom: 5px;
+    color: #958F8F;
+}
+
+#detalhes_artigo{
+    margin-right: 5%;
+}
+
+.btn_download{
+    margin-bottom: 5%;
+}

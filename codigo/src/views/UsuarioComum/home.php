@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../../public/assets/css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/home.css"/>
     <title>Alexandria</title>
 </head>
 <?php
-    require_once "./template/header.php";
+    require_once "../template/header.php";
 ?>
 <body>
     <div id="conteudo">
@@ -72,7 +72,7 @@
                 </label><br>
             </form>
         </div>
-        <div class="cards_eventos">
+        <div class="cards">
             <div class="evento">
                 <a href=""><p class="nome_evento">BSD Day</p></a>
                 <p class="nome_cadastrador">RIZZO, Nilton José;</p>
@@ -87,6 +87,6 @@
     </div>
 </body>
 <?php
-    require_once "./template/footer.php";
+    require_once "../template/footer.php";
 ?>
 </html>
