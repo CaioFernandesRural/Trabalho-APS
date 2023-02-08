@@ -2,58 +2,104 @@
 
 namespace App\models;
 
+use AppException;
+use ValidationException;
+
 class Usuario extends Pessoa {
-    private $senha;
-    private $tipoUsuario;
-    private $cpf;
-    private $telefone;
-    private $admin;
 
-    function __construct($id, $nome, $sexo, $instituicao, $email, $linkLattes, $senha, $tipoUsuario, $cpf, $telefone, $admin){
-        $this->id = $id;
-        $this->nome = $nome;
-        $this->sexo = $sexo;
-        $this->instituicao = $instituicao;
-        $this->email = $email;
-        $this->linkLattes = $linkLattes;
-        $this->senha = $senha;
-        $this->tipoUsuario = $tipoUsuario;
-        $this->cpf = $cpf;
-        $this->telefone = $telefone;
-        $this->admin = $admin;
-    }
+    protected static $tableName = 'users';
+    protected static $columns = [
+        'id',
+        'nome',
+        'senha',
+        'email',
+        'tipo_usuario',
+        'telefone',
+        'instituicao',
+        'link_lattes',
+        'sexo',
+        'cpf',
+        'admin'
+    ];
 
-    public function getSenha() {
-        return $this->senha;
-    }
-    public function getTipoUsuario() {
-        return $this->tipoUsuario;
-    }
-    public function getCpf() {
-        return $this->cpf;
-    }
-    public function getTelefone() {
-        return $this->telefone;
-    }
-    public function getAdmin() {
-        return $this->admin;
+    public function insert(){
+        
+        $this->Validate();
+        $this->is_admin = $this->id_admin ? 1 : 0;
+        
+        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        return parent::insert();
     }
 
+    public function update(){
 
-    public function setSenha($senha) {
-        $this->senha = $senha;
-    }
-    public function setTipoUsuario($tipoUsuario) {
-        $this->tipoUsuario = $tipoUsuario;
-    }
-    public function setCpf($cpf) {
-        $this->cpf = $cpf;
-    }
-    public function setTelefone($telefone) {
-        $this->telefone = $telefone;
-    }
-    public function setAdmin($admin) {
-        $this->admin = $admin;
+        $this->Validate();
+        $this->is_admin = $this->is_admin ? 1 : 0;
+
+        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        return parent::update();
     }
 
+    public function checkLogin(){
+        $this->Validate();
+        $user = static::getOne(['email' => $this->email]);
+        if($user){
+            if(password_verify($this->password, $user->password)){
+                return $user;
+            }
+        }
+        throw new AppException('Usuário/ Senha inválido(a).');
+    }
+
+    private function Validate(){
+        $errors = [];
+
+        if(!$this->nome){
+            $errors['nome'] = 'Nome é Obrigatório';
+        }
+
+        if(!$this->email){
+            $errors['email'] = 'Email é Obrigatório';
+        } elseif(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            $errors['email'] = 'Email Inválido';
+        }
+
+        if(!$this->senha){
+            $errors['senha'] = 'Senha é Obrigatória';
+        }
+        if(!$this->confirmar_senha){
+            $errors['confirmar_senha'] = 'Confirmação é Obrigatória';
+        } elseif($this->password !== $this->confirmar_senha){
+            $errors['password'] = 'Senhas Diferentes';
+            $errors['confirmar_senha'] = 'Senhas Diferentes';
+        }
+
+        if(!$this->telefone){
+            $errors['telefone'] = 'Telefone é Obrigatório';
+        } //elseif validar telefone
+
+        if(!$this->instituicao){
+            $errors['instituicao'] = 'instituicao é Obrigatório';
+        }
+
+        if(!$this->link_lattes){
+            $errors['link_lattes'] = 'O link do lattes é Obrigatório';
+        }
+
+        if(!$this->sexo){
+            $errors['sexo'] = 'Sexo é Obrigatório';
+        }
+
+        if(!$this->cpf){
+            $errors['cpf'] = 'CPF é Obrigatório';
+        }
+        
+        if(count($errors)){
+            throw new ValidationException($errors);
+        }
+    }
+
+    private function solicitarCadastro($evento){
+        //não faço a menor ideia de como codar isso acho que vai ser no controller a maior parte
+    }
 }
