@@ -48,13 +48,13 @@ input#barra_pesquisa
     max-width: 44%;
 }
 
-.cards_eventos{
+.cards{
     display: flex;
     flex-direction: column;
     gap: 10%;
 }
 
-#icon_person{
+#icon_person, #icon_logout{
     width: 2.5%;
     height: 2.5%;
     cursor: pointer;
@@ -67,7 +67,7 @@ nav{
     padding: 0.8%;
 }
 
-.evento{
+.evento, .artigo{
     background-color: #EFEFEF;
     display: flex;
     flex-direction: column;
@@ -78,14 +78,14 @@ nav{
     width: 70%;
 }
 
-.nome_evento{
+.nome_evento, .nome_artigo{
     color: #3366CC;
     font-weight: 500;
     font-size: 30px;
     cursor: pointer;
 }
 
-.nome_cadastrador{
+.nome_cadastrador, .nome_autor{
     text-decoration: underline;
 }
 
@@ -140,7 +140,7 @@ footer{
     border-radius: 5px;
     padding: 5px;
  }
- .btn_salva{
+ .btn_salva, .btn_download{
     background-color: #663399;
     color: #FFFFFF;
     border: none;
@@ -150,10 +150,96 @@ footer{
 .btn_cancela, .btn_salva{
     margin-top: 10px;
 }
+
+.btn_download{
+    width: 15%;
+    border-radius: 20px;
+}
+
  #descricao_evento{
     height: 100px;
 }
 
 #descricao_artigo{
     height: 50px;
+}
+
+.visualiza_eventos{
+    display:flex;
+    flex-direction: row;
+    padding: 2% 5%;
+    justify-content: center;
+}
+
+#h1_edita, #h1_autoriza, #h1_evento, #h1_artigo{
+    margin-top: 30px;
+    color: #3366CC;
+    text-align: center;
+    font-size: 45px;
+    margin-right: 28%;
+}
+
+#h1_autoriza{
+    margin-right: 49%;
+}
+
+#h1_evento{
+    margin-right: 45%;
+}
+
+.autorizacao{
+    background-color: #663399;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+span{
+    color: #D9D9D9;
+    margin-left: 5%;
+}
+
+#titulo_decisao{
+    color: #363636;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 14%;
+    margin-left: 1%;
+}
+
+.decisao{
+    display: flex;
+    flex-direction: row;
+    gap:10%;
+    align-items: center;
+}
+
+.icon_button{
+    max-height: 20px;
+}
+
+.container_botoes{
+    display: flex;
+    flex-direction: row;
+    gap:40%;
+}
+#titulo_editar{
+    color: #363636;
+    text-align: center;
+    margin-left: 40%;
+}
+
+#conteudo_evento_artigo{
+    margin: 0 10% 0 10%;
+}
+
+.alinha_lado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

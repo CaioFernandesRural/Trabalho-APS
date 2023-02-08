@@ -1,0 +1,20 @@
+select{
+    border-radius: 5px;
+}
+
+.nome_tema{
+    color: #3366CC;
+    margin-bottom: 2%;
+}
+
+.nome_cadastrador{
+    margin: 2% 0 2% 0;
+}
+
+span{
+    margin: 0;
+}
+
+.cards{
+    gap: 30%;
+}
