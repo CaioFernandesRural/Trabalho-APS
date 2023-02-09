@@ -12,29 +12,31 @@
     require_once "../template/header.php";
 ?>
 <body>
-    <div id="conteudo">
-        <div id="filtro">
-            <div id="titulo_filtro">
-                <p>Filtros</p>
-            </div>
-            <form id="form_filtro">
-                <input type="checkbox" id="congresso" name="congresso">
-                <label for="congresso">
-                    Congresso
-                </label><br>
-                <input type="checkbox" id="simposio" name="simposio">
-                <label for="simposio">
-                    Simpósio
-                </label><br>
-                <input type="checkbox" id="seminario" name="seminario">
-                <label for="seminario">
-                    Seminário
-                </label><br>
-                <input type="checkbox" id="mesa" name="mesa">
-                <label for="mesa">
-                    Mesa-redonda
-                </label><br>
-                <input type="checkbox" id="encontro" name="encontro">
+    <div class="container">
+
+        <div id="conteudo">
+            <div id="filtro">
+                <div id="titulo_filtro">
+                    <p>Filtros</p>
+                </div>
+                <form id="form_filtro">
+                    <input type="checkbox" id="congresso" name="congresso">
+                    <label for="congresso">
+                        Congresso
+                    </label><br>
+                    <input type="checkbox" id="simposio" name="simposio">
+                    <label for="simposio">
+                        Simpósio
+                    </label><br>
+                    <input type="checkbox" id="seminario" name="seminario">
+                    <label for="seminario">
+                        Seminário
+                    </label><br>
+                    <input type="checkbox" id="mesa" name="mesa">
+                    <label for="mesa">
+                        Mesa-redonda
+                    </label><br>
+                    <input type="checkbox" id="encontro" name="encontro">
                 <label for="encontro">
                     Encontro
                 </label><br>
@@ -85,8 +87,9 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 <?php
     require_once "../template/footer.php";
-?>
+    ?>
 </html>

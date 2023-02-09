@@ -1,6 +1,5 @@
 #conteudo{
     display: flex;
-    flex-direction: row;
     margin-top: 5%;
     justify-content: space-around;
     gap:10%;

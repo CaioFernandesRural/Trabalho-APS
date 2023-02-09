@@ -12,25 +12,28 @@
     require_once "../template/header.php";
 ?>
 <body>
-    <div id="container">
-        <div id="login">
-            <img src="../../../public/assets/img/icon_login.png" id="icon_login">
-            <form id="form_login">
-                <label>
-                    <img src="../../../public/assets/img/email.png" class="icons_login">
-                    <input type="email" id="email" name="email" placeholder="E-mail">
-                </label>
-                <br>
-                <label>
-                    <img src="../../../public/assets/img/senha.png" class="icons_login">
-                    <input type="password" id="senha" name="senha" placeholder="●●●●●">
-                </label>
-            </form>
-            <p>Não tem uma conta? <a>Inscreva-se</a></p>
+    <div class="container">
+
+        <div id="container">
+            <div id="login">
+                <img src="../../../public/assets/img/icon_login.png" id="icon_login">
+                <form id="form_login">
+                    <label>
+                        <img src="../../../public/assets/img/email.png" class="icons_login">
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                    </label>
+                    <br>
+                    <label>
+                        <img src="../../../public/assets/img/senha.png" class="icons_login">
+                        <input type="password" id="senha" name="senha" placeholder="●●●●●">
+                    </label>
+                </form>
+                <p>Não tem uma conta? <a>Inscreva-se</a></p>
         </div>
+    </div>
 </div>
 </body>
 <?php
     require_once "../template/footer.php";
-?>
+    ?>
 </html>

@@ -4,7 +4,6 @@
 }
 #conteudo_artigo{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
 }
 #titulo_resumo{

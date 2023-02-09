@@ -12,11 +12,13 @@
     require_once "../template/header.php";
 ?>
 <body>
-    <div id="conteudo_evento_artigo">
-        <div class="alinha_lado">
-            <h1 id="h1_evento">BSD DAY</h1>
-            <form>
-                <label for="edicao">Edição:</label>
+    <div class="container">
+
+        <div id="conteudo_evento_artigo">
+            <div class="alinha_lado">
+                <h1 id="h1_evento">BSD DAY</h1>
+                <form>
+                    <label for="edicao">Edição:</label>
                 <select name="edicao" id="edicao">
                     <option value="edicao_1">Edição 1</option>
                     <option value="edicao_2">Edição 2</option>
@@ -65,8 +67,9 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 <?php
     require_once "../template/footer.php";
-?>
+    ?>
 </html>

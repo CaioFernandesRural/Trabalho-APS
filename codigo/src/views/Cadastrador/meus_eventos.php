@@ -12,8 +12,10 @@
     require_once "../template/header.php";
 ?>
 <body>
-    <h1 id="h1_edita">Meus Eventos</h1>
-    <div id="titulo_editar">
+    <div class="container">
+
+        <h1 id="h1_edita">Meus Eventos</h1>
+        <div id="titulo_editar">
         <p>Editar | Deletar</p>
     </div>
     <div class="visualiza_eventos">
@@ -47,8 +49,9 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 <?php
     require_once "../template/footer.php";
-?>
+    ?>
 </html>

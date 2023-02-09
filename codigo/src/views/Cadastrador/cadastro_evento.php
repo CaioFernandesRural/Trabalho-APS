@@ -11,18 +11,20 @@
     require_once "../template/header.php";
 ?>
 <body>
-    <p class="titulo_cadastro">Dados do Evento</p>
-    <div class="cadastro">
-        <form>
-            <div class="form_container">
-                <div class="div_form">
-                    <label for="nome_evento">Nome</label>
-                    <input type="text" name="nome_evento" id="nome_evento">
-                    <br>
-                    <label for="edicao">Edição</label>
-                    <input type="text" name="edicao" id="edicao">
-                    <br>
-                    <label for="link_evento">Link do Evento</label>
+    <div class="container">
+
+        <p class="titulo_cadastro">Dados do Evento</p>
+        <div class="cadastro">
+            <form>
+                <div class="form_container">
+                    <div class="div_form">
+                        <label for="nome_evento">Nome</label>
+                        <input type="text" name="nome_evento" id="nome_evento">
+                        <br>
+                        <label for="edicao">Edição</label>
+                        <input type="text" name="edicao" id="edicao">
+                        <br>
+                        <label for="link_evento">Link do Evento</label>
                     <input type="url" id="link_evento" name="link_evento">
                     <br>
                     <label for="tipo">Tipo</label>
@@ -46,8 +48,9 @@
     </div>    
     <button class="btn_cancela">Cancelar</button>
     <button class="btn_salva">Enviar</button>
+</div>
 </body>
 <?php
     require_once "../template/footer.php";
-?>
+    ?>
 </html>
