@@ -18,7 +18,6 @@
         <div id="titulo_decisao">
             <span>Eventos Pendentes</span>
         </div>
-        <div class="visualiza_eventos">
             <div class="cards">
                 <div class="decisao">
                     <div class="evento">
@@ -41,7 +40,6 @@
                         <button type="button" class="autorizacao" id="aceita_evento2"><img class="icon_button" src="../../../public/assets/img/autoriza.svg"></button>
                         <button type="button" class="autorizacao" id="rejeita_evento2"><img class="icon_button" src="../../../public/assets/img/rejeita.svg"></button>
                     </div>
-                </div>
             </div>
     </div>
 </div>

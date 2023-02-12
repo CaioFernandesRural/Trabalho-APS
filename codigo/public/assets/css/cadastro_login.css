@@ -1,0 +1,108 @@
+.cadastro {
+    width: 830px;
+    margin: 0 auto;
+}
+
+.form_container{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+}
+
+.div_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div_form input, .div_form select{
+    border: none;
+    border-radius: 5px;
+    max-width: 100%;
+    padding: .5rem;
+}
+ .titulo_cadastro{
+    text-align: left;
+    margin: 4rem 0 2rem;
+    font-size: 30px;
+ }
+ .button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 10px;
+ }
+ .btn_cancela{
+    background-color: #efefef;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: .5rem 2rem;
+    cursor: pointer;
+}
+.btn_salva, .btn_download{
+    background-color: #663399;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: .5rem 2rem;
+ }
+
+ #login{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #EFEFEF;
+    justify-items: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    padding: 2rem;
+    border: none;
+    border-radius: 10px;
+    margin: 4rem auto;
+}
+
+#icon_login{
+    max-width: 30%;
+    margin-bottom: 30px;
+}
+
+.icons_login{
+    max-width: 10%;
+    border-right: 1px solid #d9d9d9;
+    padding-right: 5px;
+}
+
+#form_login {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#form_login label{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#form_login input{
+    border: none;
+    padding: .2rem;
+    width: 100%;
+}
+
+.inscreva-se {
+    cursor: pointer;
+}
+
+.inscreva-se p {
+    color: #663399;
+}

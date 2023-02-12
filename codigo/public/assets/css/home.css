@@ -1,9 +1,8 @@
 #conteudo{
     display: flex;
-    margin-top: 5%;
+    padding-top: 4rem;
     justify-content: space-around;
     gap:10%;
-    margin-left: 10%;
 }
 
 #titulo_filtro{
@@ -25,9 +24,41 @@
 }
 
 #form_filtro{
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#form_filtro input{
-    margin-bottom: 15px;
+#form_filtro label {
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+}
+
+#form_filtro input {
+    cursor: pointer;
+    width: 1rem;
+}
+
+.evento {
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 20px;
+    padding: 3%;
+    height: 90%;
+    width: 70%;
+}
+
+.nome_evento {
+    color: #3366CC;
+    font-weight: 500;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nome_cadastrador {
+    text-decoration: underline;
 }

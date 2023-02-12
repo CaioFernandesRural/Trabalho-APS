@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../../public/assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/cadastro_login.css"/>
     <title>Alexandria</title>
 </head>
 <?php
@@ -13,8 +13,6 @@
 ?>
 <body>
     <div class="container">
-
-        <div id="container">
             <div id="login">
                 <img src="../../../public/assets/img/icon_login.png" id="icon_login">
                 <form id="form_login">
@@ -28,9 +26,10 @@
                         <input type="password" id="senha" name="senha" placeholder="●●●●●">
                     </label>
                 </form>
-                <p>Não tem uma conta? <a>Inscreva-se</a></p>
+                <div class="inscreva-se">
+                    <p>Não tem uma conta? <a>Inscreva-se</a></p>
+                </div>
         </div>
-    </div>
 </div>
 </body>
 <?php

@@ -1,47 +1,48 @@
-.container .flex, nav {
+header.container {
     display: flex;
-}
-
-.container .flex {
-    justify-content: space-between;
-    align-items: center;
-}
-
-header{
-    padding: 2rem 0;
     background-color: #663399;
     color: #FFFFFF;
     font-weight: 300;
-    font-size: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-#pesquisa {
+.logo {
+    color: #fff;
+}
+
+.logo div h3 {
+    font-family: serif;
+    font-size: 2rem;
+}
+
+label#pesquisa {
     display: flex;
     align-items: center;
+    width: 60%;
+    position: relative;
 }
 
 input#barra_pesquisa
 {
-  width:700px;
+  width: 100%;
+  border-radius: 10px;
   background-color: #FFFFFF;
-  border-radius: 10px 0px 0px 10px;
   border: none;
   padding: 10px;
   outline: none;
 }
 
-#btn_busca{
-    background-color: #FFFFFF;
-    border-radius: 0px 10px 10px 0px;
-    border: none;
-    padding: 4px;
+#pesquisa img {
     cursor: pointer;
     position: relative;
-    display: inline-block;
-    height: 40.44px;
+    right: 2.5rem;
+    max-width: 1.5rem;
 }
-
-#icon_lupa{
-    margin-top: 3px;
-    max-width: 44%;
+#icon_person, #icon_logout{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
 }

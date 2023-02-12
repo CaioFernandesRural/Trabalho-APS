@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 @import 'header.css';
+@import 'footer.css';
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +9,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-.container {
-    padding: 0 8rem;
+body {
+    height: 100vh;
 }
 
-#conteudo{
-    display: flex;
+.container {
+    padding: 0 4rem;
 }
 
 .cards{
@@ -23,28 +23,11 @@
     gap: 10%;
 }
 
-#icon_person, #icon_logout{
-    width: 2.5%;
-    height: 2.5%;
-    cursor: pointer;
-}
-
 nav{
     background-color: #EFEFEF;
     color: #663399;
     justify-content: space-around;
     padding: 0.8%;
-}
-
-.evento, .artigo{
-    background-color: #EFEFEF;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 20px;
-    padding: 3%;
-    height: 90%;
-    width: 70%;
 }
 
 .nome_evento, .nome_artigo{
@@ -58,70 +41,28 @@ nav{
     text-decoration: underline;
 }
 
-footer{
-    background-color: #663399;
-    color: #FFFFFF;
-    padding: 2%;
-    font-weight: 300;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 5%;
-    width: 100%;
-}
 
-.form_container{
-    display: flex;
-    gap:10%;
-    margin-left: 10%;
-}
 
-.div_form{
+.artigo_evento {
+    background-color: #EFEFEF;
     display: flex;
     flex-direction: column;
-}
-
-.cadastro{
-    background-color: #EFEFEF;
-    padding: 2%;
-    width: 40%;
-    margin-left: 32%;
-    border-radius: 10px;
-}
-
-.div_form input, .div_form select{
-    border: none;
-    border-radius: 5px;
-    height: 25px;
-}
- .titulo_cadastro{
-    text-align: center;
-    margin-left: -200px;
-    margin-top: 5%;
-    font-size: 30px;
- }
-
- .btn_cancela{
-    margin-left: 60%;
-    background-color: #000;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
- }
- .btn_salva, .btn_download{
-    background-color: #663399;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
- }
-.btn_cancela, .btn_salva{
-    margin-top: 10px;
-}
-
-.btn_download{
-    width: 15%;
+    gap: 1rem;
     border-radius: 20px;
+    max-width: 50%;
+    padding: 2rem;
+    position: relative;
+}
+
+.artigo_evento button {
+    position: absolute;
+    bottom: 2rem;
+    right: 4rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1rem;
 }
 
  #descricao_evento{
@@ -137,7 +78,6 @@ footer{
 }
 
 #h1_edita, #h1_autoriza, #h1_evento, #h1_artigo{
-    margin-top: 30px;
     color: #3366CC;
     text-align: center;
     font-size: 45px;
@@ -153,11 +93,18 @@ footer{
 
 .autorizacao{
     background-color: #663399;
-    padding: 10px;
     border: none;
     border-radius: 5px;
     height: 40px;
     width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autorizacao img {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 span{
@@ -183,13 +130,7 @@ span{
 }
 
 .icon_button{
-    max-height: 20px;
     cursor: pointer;
-}
-
-.container_botoes{
-    display: flex;
-    gap:80%;
 }
 #titulo_editar{
     color: #363636;

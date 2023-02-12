@@ -13,10 +13,9 @@
 ?>
 <body>
     <div class="container">
-
-        <h1 id="h1_artigo">Sistemas Educacionais e Acadêmicos</h1>
         <div id="conteudo_artigo">
             <div id="conteudo_evento_artigo">
+                <h1 id="h1_artigo">Sistemas Educacionais e Acadêmicos</h1>
                 <p class="nome_cadastrador">RIZZO, Nilton José;</p>
                 <div class="alinha_lado">
                     <p>Data de publicação: 01/02/2023</p>

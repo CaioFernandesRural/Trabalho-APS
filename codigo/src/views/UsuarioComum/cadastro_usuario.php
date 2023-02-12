@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../../public/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/cadastro_login.css"/>
     <title>Alexandria</title>
 </head>
 <?php
@@ -12,9 +13,8 @@
 ?>
 <body>
     <div class="container">
-
-        <p class="titulo_cadastro">Dados de Cadastro</p>
         <div class="cadastro">
+            <p class="titulo_cadastro">Dados de Cadastro</p>
             <form>
                 <div class="form_container">
                     <div class="div_form">
@@ -55,9 +55,11 @@
                 </div>    
             </div>
         </form>
-    </div>    
-    <button class="btn_cancela">Cancelar</button>
-    <button class="btn_salva">Enviar</button>
+        <div class="button-container">
+            <button class="btn_cancela">Cancelar</button>
+            <button class="btn_salva">Enviar</button>
+        </div>
+    </div>
 </div>
 </body>
 <?php

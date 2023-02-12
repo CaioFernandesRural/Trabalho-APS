@@ -13,7 +13,6 @@
 ?>
 <body>
     <div class="container">
-
         <div id="conteudo_evento_artigo">
             <div class="alinha_lado">
                 <h1 id="h1_evento">BSD DAY</h1>
@@ -26,44 +25,52 @@
             </form>
         </div>
         <p class="nome_cadastrador">RIZZO, Nilton José;</p>
+        <div class="artigos">
         <span>Tema</span>
-        <h3 class="nome_tema">O uso do software livre no cotidiano do brasileiro médio</h3>
-        <span>Artigos</span>
-        <div class="cards">
-            <div class="artigo">
-                <a href=""><p class="nome_artigo">BSD Day</p></a>
-                <p class="nome_autor">RIZZO, Nilton José;</p>
-                <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
-            </div>
-            <div class="artigo">
-                <a href=""><p class="nome_artigo">Nome do Artigo</p></a>
-                <p class="nome_autor">Nome do Autor;</p>
-                <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
-            </div>
-            <div class="artigo">
-                <a href=""><p class="nome_artigo">Nome do Artigo</p></a>
-                <p class="nome_autor">Nome do Autor;</p>
-                <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+        <div class="titulo_tema">
+            <h3>O uso do software livre no cotidiano do brasileiro médio</h3>
+        </div>
+            <span>Artigos</span>
+            <div class="cards">
+                <div class="artigo">
+                    <a href="artigo.php"><p class="nome_artigo">BSD Day</p></a>
+                    <p class="nome_autor">RIZZO, Nilton José;</p>
+                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                </div>
+                <div class="artigo">
+                    <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
+                    <p class="nome_autor">Nome do Autor;</p>
+                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                </div>
+                <div class="artigo">
+                    <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
+                    <p class="nome_autor">Nome do Autor;</p>
+                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                </div>
             </div>
         </div>
+        <div class="artigos">
         <span>Tema</span>
-        <h3 class="nome_tema">O Futuro do Armazenamento em Memória</h3>
-        <span>Artigos</span>
-        <div class="cards">
-            <div class="artigo">
-                <a href=""><p class="nome_artigo">Boas Práticas de Otimização</p></a>
-                <p class="nome_autor">SERRA, Sergio Manuel; </p>
-                <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
-            </div>
-            <div class="artigo">
-                <a href=""><p class="nome_artigo">Nome do Artigo</p></a>
-                <p class="nome_autor">Nome do Autor;</p>
-                <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
-            </div>
-            <div class="artigo">
-                <a href=""><p class="nome_artigo">Nome do Artigo</p></a>
-                <p class="nome_autor">Nome do Autor;</p>
-                <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+        <div class="titulo_tema">
+            <h3>O Futuro do Armazenamento em Memória</h3>
+        </div>
+            <span>Artigos</span>
+            <div class="cards">
+                <div class="artigo">
+                    <a href="artigo.php"><p class="nome_artigo">Boas Práticas de Otimização</p></a>
+                    <p class="nome_autor">SERRA, Sergio Manuel; </p>
+                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                </div>
+                <div class="artigo">
+                    <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
+                    <p class="nome_autor">Nome do Autor;</p>
+                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                </div>
+                <div class="artigo">
+                    <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
+                    <p class="nome_autor">Nome do Autor;</p>
+                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                </div>
             </div>
         </div>
     </div>

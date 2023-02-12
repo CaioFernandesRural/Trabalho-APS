@@ -20,68 +20,68 @@
                     <p>Filtros</p>
                 </div>
                 <form id="form_filtro">
-                    <input type="checkbox" id="congresso" name="congresso">
                     <label for="congresso">
+                        <input type="checkbox" id="congresso" name="congresso">
                         Congresso
-                    </label><br>
-                    <input type="checkbox" id="simposio" name="simposio">
+                    </label>
                     <label for="simposio">
+                        <input type="checkbox" id="simposio" name="simposio">
                         Simpósio
-                    </label><br>
-                    <input type="checkbox" id="seminario" name="seminario">
+                    </label>
                     <label for="seminario">
+                        <input type="checkbox" id="seminario" name="seminario">
                         Seminário
-                    </label><br>
-                    <input type="checkbox" id="mesa" name="mesa">
+                    </label>
                     <label for="mesa">
+                        <input type="checkbox" id="mesa" name="mesa">
                         Mesa-redonda
-                    </label><br>
-                    <input type="checkbox" id="encontro" name="encontro">
-                <label for="encontro">
+                    </label>
+                    <label for="encontro">
+                        <input type="checkbox" id="encontro" name="encontro">
                     Encontro
-                </label><br>
-                <input type="checkbox" id="painel" name="painel">
-                <label for="painel">
-                    Painel
-                </label><br>
-                <input type="checkbox" id="forum" name="forum">
-                <label for="forum">
-                    Fórum
-                </label><br>
-                <input type="checkbox" id="conferencia" name="conferencia">
-                <label for="conferencia">
-                    Conferência
-                </label><br>
-                <input type="checkbox" id="jornada" name="jornada">
-                <label for="jornada">
-                    Jornada
-                </label><br>
-                <input type="checkbox" id="workshop" name="workshop">
-                <label for="workshop">
-                    Workshop
-                </label><br>
-                <input type="checkbox" id="coloquio" name="coloquio">
-                <label for="coloquio">
-                    Colóquio
-                </label><br>
-                <input type="checkbox" id="cursos" name="cursos">
-                <label for="cursos">
-                    Cursos
-                </label><br>
-                <input type="checkbox" id="semana" name="semana">
-                <label for="semana">
-                    Semana
-                </label><br>
+                    </label>
+                    <label for="painel">
+                        <input type="checkbox" id="painel" name="painel">
+                        Painel
+                    </label>
+                    <label for="forum">
+                        <input type="checkbox" id="forum" name="forum">
+                        Fórum
+                    </label>
+                    <label for="conferencia">
+                        <input type="checkbox" id="conferencia" name="conferencia">
+                        Conferência
+                    </label>
+                    <label for="jornada">
+                        <input type="checkbox" id="jornada" name="jornada">
+                        Jornada
+                    </label>
+                    <label for="workshop">
+                        <input type="checkbox" id="workshop" name="workshop">
+                        Workshop
+                    </label>
+                    <label for="coloquio">
+                        <input type="checkbox" id="coloquio" name="coloquio">
+                        Colóquio
+                    </label>
+                    <label for="cursos">
+                        <input type="checkbox" id="cursos" name="cursos">
+                        Cursos
+                    </label>
+                    <label for="semana">
+                        <input type="checkbox" id="semana" name="semana">
+                        Semana
+                    </label>
             </form>
         </div>
         <div class="cards">
             <div class="evento">
-                <a href=""><p class="nome_evento">BSD Day</p></a>
+                <a href="evento.php"><p class="nome_evento">BSD Day</p></a>
                 <p class="nome_cadastrador">RIZZO, Nilton José;</p>
                 <p class="descricao_evento">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor velit, tempor at felis sit amet, pretium maximus augue. In fermentum, ligula ac pharetra</p>
             </div>
             <div class="evento">
-                <a href=""><p class="nome_evento">Nome do Evento</p></a>
+                <a href="evento.php"><p class="nome_evento">Nome do Evento</p></a>
                 <p class="nome_cadastrador">Nome do Cadastrador;</p>
                 <p class="descricao_evento">(Descrição)</p>
             </div>
