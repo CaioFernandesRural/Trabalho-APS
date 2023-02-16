@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/css/cadastro_login.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/cadastro_login.css"/>
     <title>Alexandria</title>
 </head>
 <body>
     <div class="container">
-            <div id="login">
-                <img src="../assets/img/icon_login.png" id="icon_login">
-                <form id="form_login">
-                    <label>
-                        <img src="../public/assets/img/email.png" class="icons_login">
-                        <input type="email" id="email" name="email" placeholder="E-mail">
-                    </label>
-                    <br>
-                    <label>
-                        <img src="../public/assets/img/senha.png" class="icons_login">
-                        <input type="password" id="senha" name="senha" placeholder="●●●●●">
-                    </label>
-                </form>
-                <div class="inscreva-se">
-                    <p>Não tem uma conta? <a>Inscreva-se</a></p>
+        <div id="login">
+            <img src="/assets/img/icon_login.png" id="icon_login">
+            <form id="form_login" action="#" method="post">
+                <?php include(TEMPLATE_PATH . '/messages.php') ?><!--inclui o arquivo de mensages de erro/confirmação-->
+                <label>
+                    <img src="/assets/img/email.png" class="icons_login">
+                    <input type="email" id="email" name="email"
+                    <?= $errors['email'] ? 'is-invalid' : '' ?>
+                    <?php if(isset($_POST['email'])):?>
+                    value="<?=$_POST['email']?>"
+                    <?php endif; ?>
+                    placeholder="Informe o e-mail" autofocus>
+                </label>
+                <div class="invalid-feedback">
+                    <?= $errors['email'] ?>
                 </div>
+                <br>
+                <label>
+                    <img src="/assets/img/senha.png" class="icons_login">
+                    <input type="password" id="senha" name="senha" placeholder="●●●●●">
+                </label>
+                <div class="invalid-feedback">
+                    <?= $errors['password'] ?>
+                </div>
+                <div class="card-footer">
+                    <button class="btn">Entrar</button>
+                </div>
+            </form>
+            <div class="inscreva-se">
+                <p>Não tem uma conta? <a>Inscreva-se</a></p>
+            </div>
         </div>
-</div>
+    </div>
 </body>
 </html>

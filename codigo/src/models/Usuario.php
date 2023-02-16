@@ -40,9 +40,24 @@ class Usuario extends Pessoa {
         return parent::update();
     }
 
+    public function validateLogin(){
+        $errors = [];
+
+        if(!$this->email){
+            $errors['email'] = 'Email obrigatório.';
+        }
+        if(!$this->password){
+            $errors['password'] = 'Senha obrigatória.';
+        }
+
+        if(count($errors) > 0){
+            throw new ValidationException($errors);
+        }
+    }
+
     public function checkLogin(){
-        $this->Validate();
-        $user = static::getOne(['email' => $this->email]);
+        $this->validateLogin();
+        $user = Pessoa::getOne(['email' => $this->email]);
         if($user){
             if(password_verify($this->password, $user->password)){
                 return $user;
