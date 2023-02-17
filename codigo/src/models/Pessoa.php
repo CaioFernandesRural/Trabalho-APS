@@ -42,7 +42,7 @@ abstract class Pessoa {
         }
     }
 
-    public function getOne($filters, $columns = '*'){
+    public static function getOne($filters, $columns = '*'){
 
         $class = get_called_class(); //nome da classe que chamou o método
         $result = static::getResultSetFromSelect($filters, $columns);
