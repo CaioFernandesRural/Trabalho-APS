@@ -27,36 +27,65 @@
                         </div>
                         <br>
                         <label for="sexo">Sexo</label>
-                        <select name="sexo" id="sexo">
+                        <select name="sexo" id="sexo" value="<?= $sexo ?>">
                             <option value="fem">Feminino</option>
                             <option value="masc">Masculino</option>
                             <option value="outros">Outros</option>
                         </select>
                         <br>
                         <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf">
+                        <input type="text" id="cpf" name="cpf"
+                        value="<?= $cpf ?>">
+                        <div class="invalid-feedback">
+                            <?= $errors['cpf'] ?>
+                        </div>
                         <br>
                         <label for="instituicao">Instituição</label>
-                        <input type="text" id="instituicao" name="instituicao">
+                        <input type="text" id="instituicao" name="instituicao"
+                        value="<?= $instituicao ?>">
+                        <div class="invalid-feedback">
+                            <?= $errors['instituicao'] ?>
+                        </div>
                         <br>
                         <label for="lattes">Link do Currículo Lattes</label>
-                        <input type="url" id="lattes" name="lattes">
+                        <input type="url" id="lattes" name="lattes" 
+                        value="<?= $lattes ?>">
+                        <div class="invalid-feedback">
+                            <?= $errors['lattes'] ?>
+                        </div>
                     </div>
                     <div class="div_form">
                         <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" name="telefone">
+                        <input type="tel" id="telefone" name="telefone"
+                        value="<?= $telefone ?>">
+                        <div class="invalid-feedback">
+                            <?= $errors['telefone'] ?>
+                        </div>
                         <br>
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email"
+                        value="<?= $email ?>">
+                        <div class="invalid-feedback">
+                            <?= $errors['email'] ?>
+                        </div>
                         <br>
                     <label for="confirma_email">Confirme seu e-mail</label>
                     <input type="email" id="confirma_email" name="confirma_email">
+                    <div class="invalid-feedback">
+                        <?= $errors['confirma_email'] ?>
+                    </div>
                     <br>
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha">
+                    <div class="invalid-feedback">
+                        <?= $errors['senha'] ?>
+                    </div>
                     <br>
                     <label for="confirma_senha">Confirme sua senha</label>
                     <input type="password" id="confirma_senha" name="confirma_senha">  
+                    <div class="invalid-feedback">
+                        <?= $errors['confirma_senha'] ?>
+                    </div>
                 </div>    
             </div>
         </form>
