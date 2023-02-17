@@ -8,15 +8,23 @@
     <link rel="stylesheet" type="text/css" href="assets/css/cadastro_usuario.css"/>
     <title>Alexandria</title>
 </head>
+
+<?php include(TEMPLATE_PATH . "/messages.php") ?>
+
 <body>
     <div class="container">
         <div class="cadastro">
             <p class="titulo_cadastro">Dados de Cadastro</p>
             <form action="#" method="post">
+                <input type="hidden" name="id" value="<?= $id ?>">
                 <div class="form_container">
                     <div class="div_form">
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome">
+                        <input type="text" name="nome" id="nome"
+                        value="<?= $name ?>">
+                        <div class="invalid-feedback">
+                            <?= $errors['name'] ?>
+                        </div>
                         <br>
                         <label for="sexo">Sexo</label>
                         <select name="sexo" id="sexo">

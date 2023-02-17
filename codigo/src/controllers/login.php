@@ -1,6 +1,6 @@
 <?php
 
-use App\models\Usuario;
+use App\models\Usuario;//não era pra aparecer isso
 
 loadModel('Usuario');//Chama o objeto Usuario que tem os métodos do sql
 session_start();
