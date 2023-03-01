@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/css/evento.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/evento.css"/>
     <title>Alexandria</title>
 </head>
 <body>
@@ -32,17 +32,17 @@
                 <div class="artigo">
                     <a href="artigo.php"><p class="nome_artigo">BSD Day</p></a>
                     <p class="nome_autor">RIZZO, Nilton José;</p>
-                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                    <button class="btn_download"><img src="/assets/img/download.svg">Download</button>
                 </div>
                 <div class="artigo">
                     <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
                     <p class="nome_autor">Nome do Autor;</p>
-                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                    <button class="btn_download"><img src="/assets/img/download.svg">Download</button>
                 </div>
                 <div class="artigo">
                     <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
                     <p class="nome_autor">Nome do Autor;</p>
-                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                    <button class="btn_download"><img src="/assets/img/download.svg">Download</button>
                 </div>
             </div>
         </div>
@@ -56,17 +56,17 @@
                 <div class="artigo">
                     <a href="artigo.php"><p class="nome_artigo">Boas Práticas de Otimização</p></a>
                     <p class="nome_autor">SERRA, Sergio Manuel; </p>
-                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                    <button class="btn_download"><img src="/assets/img/download.svg">Download</button>
                 </div>
                 <div class="artigo">
                     <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
                     <p class="nome_autor">Nome do Autor;</p>
-                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                    <button class="btn_download"><img src="/assets/img/download.svg">Download</button>
                 </div>
                 <div class="artigo">
                     <a href="artigo.php"><p class="nome_artigo">Nome do Artigo</p></a>
                     <p class="nome_autor">Nome do Autor;</p>
-                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                    <button class="btn_download"><img src="/assets/img/download.svg">Download</button>
                 </div>
             </div>
         </div>

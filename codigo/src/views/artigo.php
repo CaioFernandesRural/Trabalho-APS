@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/css/artigo.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/artigo.css"/>
     <title>Alexandria</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <p class="nome_cadastrador">RIZZO, Nilton José;</p>
                 <div class="alinha_lado">
                     <p>Data de publicação: 01/02/2023</p>
-                    <button class="btn_download"><img src="../../../public/assets/img/download.svg">Download</button>
+                    <button class="btn_download"><img src="/assets/img/download.svg">Download</button>
                 </div>
                 <div id="titulo_resumo">
                     <p>Resumo</p>
