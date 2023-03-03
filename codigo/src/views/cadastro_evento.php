@@ -31,9 +31,9 @@
                     </select>
                 </div>
                 <div class="div_form">
-                    <label for="email_resp">E-mail do Responsável</label>
+                    <!--<label for="email_resp">E-mail do Responsável</label>
                     <input type="email" id="email_resp" name="email_resp">
-                    <br>
+                    <br>-->
                     <label for="area">Área de Estudo</label>
                     <input type="text" id="area" name="area">
                     <br>

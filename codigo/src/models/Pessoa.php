@@ -81,7 +81,9 @@ abstract class Pessoa {
         foreach(static::$columns as $col){
             $sql .= static::getFormatedValue($this->$col) . ",";//VALORES formatados retornados
         }
+        
         $sql[strlen($sql) - 1] = ")";
+        #var_dump($sql); //teste
         $id = Database::executeSQL($sql);
         $this->id = $id;
 
@@ -127,10 +129,8 @@ abstract class Pessoa {
     private static function getFormatedValue($value){ //formata strings para o sql
         if (is_null($value)){
             return "null";
-        } elseif (gettext($value) == 'string'){
-            return "'{$value}'";
         } else {
-            return $value;
+            return "'{$value}'";
         }
     }
 }
