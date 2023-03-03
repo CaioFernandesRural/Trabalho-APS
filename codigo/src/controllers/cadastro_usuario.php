@@ -9,23 +9,33 @@ $exception = null;
 $userData = [];
 
 //caso a página seja de update também
-if(!count($_POST) && isset($_GET['update'])){
+/*if(!count($_POST) && isset($_GET['update'])){ //primeira vez que a página carrega
     $user = Usuario::getOne(['id' => $_GET['update']]);//procura o usuário pelo id
     $userData = $user->getValues();
     $userData['password'] = null;
-} elseif (count($_POST) > 0){
+} else*/
+    if (count($_POST) > 0){
     try {
-        $dbUser = new Usuario($_POST); //passando pro contructor os parâmetros do post
-        if ($dbUser->id){ //se for um usuário com id( já cadastrado )
-            $dbUser->update();
-            addSuccessMsg('Usuário alterado com sucesso');
-            header('Location: users.php');
-            exit();
-        } else {
-            $dbUser->insert();
-            addSuccessMsg('Usuário cadastrado com sucesso');
-            $_POST = [];
-        }
+
+        $entrada = [ //selecionar o que entra do post
+           'nome'=>$_POST['nome'],
+           'senha'=>$_POST['senha'],
+           'confirmar_senha'=>$_POST['confirmar_senha'],
+           'email'=>$_POST['email'],
+           'telefone'=>$_POST['telefone'],
+           'instituicao'=>$_POST['instituicao'],
+           'link_lattes'=>$_POST['link_lattes'],
+           'sexo'=>$_POST['sexo'],
+           'cpf'=>$_POST['cpf'],
+           'tipo_usuario'=>'comum',
+        ];
+
+        $dbUser = new Usuario($entrada); //passando pro contructor os parâmetros do post
+
+        $dbUser->insert();
+        #addSuccessMsg('Usuário cadastrado com sucesso');//tá indefinido
+        $_POST = [];
+        
     } catch (Exception $e) {
         $exception = $e;
     } finally{

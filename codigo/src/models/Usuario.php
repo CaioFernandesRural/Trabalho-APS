@@ -7,7 +7,7 @@ use ValidationException;
 
 class Usuario extends Pessoa {
 
-    protected static $tableName = 'users';
+    protected static $tableName = 'usuario';
     protected static $columns = [
         'id',
         'nome',
@@ -25,9 +25,10 @@ class Usuario extends Pessoa {
     public function insert(){
         
         $this->Validate();
-        $this->is_admin = $this->id_admin ? 1 : 0;
+        $this->admin = $this->admin ? 1 : 0;
         
-        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        #$this->senha = password_hash($this->senha, PASSWORD_DEFAULT);
+        //encripta a senha
         return parent::insert();
     }
 
@@ -84,8 +85,8 @@ class Usuario extends Pessoa {
         }
         if(!$this->confirmar_senha){
             $errors['confirmar_senha'] = 'Confirmação é Obrigatória';
-        } elseif($this->password !== $this->confirmar_senha){
-            $errors['password'] = 'Senhas Diferentes';
+        } elseif($this->senha !== $this->confirmar_senha){
+            $errors['senha'] = 'Senhas Diferentes';
             $errors['confirmar_senha'] = 'Senhas Diferentes';
         }
 
@@ -108,8 +109,15 @@ class Usuario extends Pessoa {
         if(!$this->cpf){
             $errors['cpf'] = 'CPF é Obrigatório';
         }
+
+        if(!$this->admin){ //setar pra booleano caso venha nulo
+            $this->admin = false;
+        }
         
         if(count($errors)){
+            /*foreach ($errors as $key => $value) {
+                echo("<br>" . $value . "<br>");
+            }*/ //medidas extramas requerem soluções extremas
             throw new ValidationException($errors);
         }
     }

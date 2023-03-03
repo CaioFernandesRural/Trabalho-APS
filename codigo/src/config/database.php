@@ -28,8 +28,8 @@ class Database
         if(!mysqli_query($conn, $sql)){
             throw new Exception(mysqli_error($conn));
         }
-        $id = $conn->insert_id;
+        $idCon = $conn->insert_id;
         $conn->close();
-        return $id;
+        return $idCon;
     }
 }

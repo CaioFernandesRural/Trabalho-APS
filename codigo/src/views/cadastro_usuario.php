@@ -16,14 +16,14 @@
         <div class="cadastro">
             <p class="titulo_cadastro">Dados de Cadastro</p>
             <form action="#" method="post">
-                <input type="hidden" name="id" value="<?= $id ?>">
+                <<input type="hidden" name="id" id="id" value="<?= $id ?>">
                 <div class="form_container">
                     <div class="div_form">
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" id="nome"
-                        value="<?= $name ?>">
+                        value="<?= $nome ?>">
                         <div class="invalid-feedback">
-                            <?= $errors['name'] ?>
+                            <?= $errors['nome'] ?>
                         </div>
                         <br>
                         <label for="sexo">Sexo</label>
@@ -47,11 +47,11 @@
                             <?= $errors['instituicao'] ?>
                         </div>
                         <br>
-                        <label for="lattes">Link do Currículo Lattes</label>
-                        <input type="url" id="lattes" name="lattes" 
-                        value="<?= $lattes ?>">
+                        <label for="link_lattes">Link do Currículo Lattes</label>
+                        <input type="url" id="link_lattes" name="link_lattes" 
+                        value="<?= $link_lattes ?>">
                         <div class="invalid-feedback">
-                            <?= $errors['lattes'] ?>
+                            <?= $errors['link_lattes'] ?>
                         </div>
                     </div>
                     <div class="div_form">
@@ -81,10 +81,10 @@
                         <?= $errors['senha'] ?>
                     </div>
                     <br>
-                    <label for="confirma_senha">Confirme sua senha</label>
-                    <input type="password" id="confirma_senha" name="confirma_senha">  
+                    <label for="confirmar_senha">Confirme sua senha</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha">  
                     <div class="invalid-feedback">
-                        <?= $errors['confirma_senha'] ?>
+                        <?= $errors['confirmar_senha'] ?>
                     </div>
                 </div>    
             </div>
