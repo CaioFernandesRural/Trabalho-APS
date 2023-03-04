@@ -1,5 +1,8 @@
 CREATE DATABASE Alexandria;
 USE Alexandria;
+CREATE USER 'user_alexandria'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON Alexandria . * TO 'user_alexandria'@'localhost';
+FLUSH PRIVILEGES;
 
 CREATE TABLE `Usuario` (
 	`id` int NOT NULL AUTO_INCREMENT,

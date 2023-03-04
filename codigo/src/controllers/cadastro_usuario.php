@@ -3,7 +3,7 @@
 use App\models\Usuario;
 
 session_start();
-//requireValidSession(false); //n precisa de sessão
+requireValidSession(false); //n precisa de sessão
 
 $exception = null;
 $userData = [];
@@ -33,7 +33,7 @@ $userData = [];
         $dbUser = new Usuario($entrada); //passando pro contructor os parâmetros do post
 
         $dbUser->insert();
-        #addSuccessMsg('Usuário cadastrado com sucesso');//tá indefinido
+        addSuccessMsg('Usuário cadastrado com sucesso');
         $_POST = [];
         
     } catch (Exception $e) {
