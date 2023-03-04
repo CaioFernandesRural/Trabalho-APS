@@ -13,7 +13,7 @@ if($exception){ //se for passada um exception pelo controller
         'message' => $exception->getMessage()
     ];
 
-    if(get_class($exception) === 'ValidationException'){ //se for uma excption de validação
+    if(get_class($exception) === 'ValidationException'){ //se for uma exception de validação
         $errors = $exception->getErrors();
     }
 }

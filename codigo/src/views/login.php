@@ -32,7 +32,7 @@
                     <input type="password" id="senha" name="senha" placeholder="●●●●●">
                 </label>
                 <div class="invalid-feedback">
-                    <?= $errors['password'] ?>
+                    <?= $errors['senha'] ?>
                 </div>
                 <div class="card-footer">
                     <button class="btn">Entrar</button>

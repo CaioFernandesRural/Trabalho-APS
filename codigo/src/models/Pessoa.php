@@ -53,6 +53,7 @@ abstract class Pessoa {
     public static function get($filters = [], $columns = '*'){
         $objects = [];
         $result = static::getResultSetFromSelect($filters, $columns);
+
         if($result){
             $class = get_called_class();
             while($row = $result->fetch_assoc()){
@@ -63,7 +64,7 @@ abstract class Pessoa {
     }
 
     public static function getResultSetFromSelect($filters = [], $columns = '*'){
-        $sql = "SELECT {$columns} FROM" .
+        $sql = "SELECT {$columns} FROM " .
         static::$tableName .
         static::getFilters($filters);
 
@@ -83,7 +84,6 @@ abstract class Pessoa {
         }
         
         $sql[strlen($sql) - 1] = ")";
-        #var_dump($sql); //teste
         $id = Database::executeSQL($sql);
         $this->id = $id;
 

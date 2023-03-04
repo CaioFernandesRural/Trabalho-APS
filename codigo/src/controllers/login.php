@@ -8,7 +8,12 @@ $exception = null;
 
 if(count($_POST) > 0){ //se tiver algo no POST
 
-    $login = new Usuario($_POST);
+    $entrada = [
+        'email'=>$_POST['email'],
+        'senha'=>$_POST['senha']
+    ];
+
+    $login = new Usuario($entrada);
 
     try{
         $user = $login->checkLogin();

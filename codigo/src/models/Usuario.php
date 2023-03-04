@@ -37,7 +37,7 @@ class Usuario extends Pessoa {
         $this->Validate();
         $this->is_admin = $this->is_admin ? 1 : 0;
 
-        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        $this->senha = password_hash($this->senha, PASSWORD_DEFAULT);
         return parent::update();
     }
 
@@ -47,8 +47,8 @@ class Usuario extends Pessoa {
         if(!$this->email){
             $errors['email'] = 'Email obrigatório.';
         }
-        if(!$this->password){
-            $errors['password'] = 'Senha obrigatória.';
+        if(!$this->senha){
+            $errors['senha'] = 'Senha obrigatória.';
         }
 
         if(count($errors) > 0){
@@ -58,9 +58,11 @@ class Usuario extends Pessoa {
 
     public function checkLogin(){
         $this->validateLogin();
-        $user = Pessoa::getOne(['email' => $this->email]);
+        $user = Usuario::getOne(['email' => $this->email]);
+
         if($user){
-            if(password_verify($this->password, $user->password)){
+
+            if($this->senha === $user->senha){
                 return $user;
             }
         }
@@ -115,9 +117,6 @@ class Usuario extends Pessoa {
         }
         
         if(count($errors)){
-            /*foreach ($errors as $key => $value) {
-                echo("<br>" . $value . "<br>");
-            }*/ //medidas extramas requerem soluções extremas
             throw new ValidationException($errors);
         }
     }
