@@ -1,3 +1,3 @@
-SELECT * FROM usuario WHERE 1 = 1 AND email = 'aaa@aaaaa.br';
+SELECT * FROM usuario ;
 
 DELETE FROM usuario WHERE id > 1; 
