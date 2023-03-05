@@ -8,24 +8,26 @@ session_start();
 $exception = null;
 $userData = [];
 
-//caso a página seja de update também
-if(!count($_POST) && isset($_GET['update'])){
-    $user = Evento::getOne(['id' => $_GET['update']]);//procura o usuário pelo id
-    $userData = $user->getValues();
-    $userData['password'] = null;
-} elseif (count($_POST) > 0){
+if (count($_POST) > 0){
     try {
-        $dbUser = new Evento($_POST); //passando pro contructor os parâmetros do post
-        if ($dbUser->id){ //se for um usuário com id( já cadastrado )
-            $dbUser->update();
-            addSuccessMsg('Usuário alterado com sucesso');
-            header('Location: users.php');
-            exit();
-        } else {
-            $dbUser->insert();
-            addSuccessMsg('Usuário cadastrado com sucesso');
-            $_POST = [];
-        }
+
+        $entrada = [
+            'nome'=>$_POST['nome_evento'],
+            'tipo'=>$_POST['tipo'],
+            'area_de_estudo'=>$_POST['area_de_estudo'],
+	        'id_cadastrador'=>$_SESSION['user']->id, //pega o id da session
+            'descricao'=>$_POST['descricao'],
+            'link_evento'=>$_POST['link_evento'],
+            'autorizado'=>false,
+            'ano'=>$_POST ['ano']
+        ];
+
+        $dbUser = new Evento($entrada); //passando pro contructor os parâmetros do post
+        
+        $dbUser->insert();
+        addSuccessMsg('Evento cadastrado com sucesso');
+        $_POST = [];
+        
     } catch (Exception $e) {
         $exception = $e;
     } finally{
@@ -33,4 +35,4 @@ if(!count($_POST) && isset($_GET['update'])){
     }
 }
 
-loadTemplateView('cadastro_evento');
+loadTemplateView('cadastro_evento', $userData + ['exception' => $exception]);

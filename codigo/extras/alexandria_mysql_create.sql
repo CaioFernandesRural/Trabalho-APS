@@ -1,6 +1,6 @@
 CREATE DATABASE Alexandria;
 USE Alexandria;
-CREATE USER 'user_alexandria'@'localhost' IDENTIFIED BY 'password';
+CREATE USER IF NOT EXISTS 'user_alexandria'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON Alexandria . * TO 'user_alexandria'@'localhost';
 FLUSH PRIVILEGES;
 
@@ -22,24 +22,13 @@ CREATE TABLE `Usuario` (
 CREATE TABLE `Evento` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
-    `tipo`  enum(
-		'Congresso', 'Encontro', 'Seminário', 'Mesa-redonda',
-        'Simpósio', 'Painel', 'Fórum', 'Conferência', 'Jornada',
-        'Cursos', 'Colóquio', 'Semana', 'Workshop'),
+    `tipo`  varchar(255) NOT NULL,
 	`area_de_estudo` varchar(255) NOT NULL,
-	`tipo`: enum('Congresso', 'Encontro', 'Seminário', 'Mesa-redonda', 'Simpósio', 'Painel',
-	'Fórum', 'Conferência', 'Jornada', 'Cursos', 'Colóquio', 'Semana', 'Workshop'),
 	`id_cadastrador` int NOT NULL,
-	PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `AnoEvento` (
-	`id` int NOT NULL AUTO_INCREMENT,
-	`ano` int NOT NULL,
-	`descricao` varchar(255) NOT NULL,
+    `descricao` varchar(255) NOT NULL,
 	`link_evento` varchar(255) NOT NULL,
-	`autorizado` bool NOT NULL,
-	`id_evento` bigint NOT NULL,
+	`autorizado` varchar(10) NOT NULL,
+    `ano` int NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -64,9 +53,9 @@ CREATE TABLE `Autor` (
 );
 
 CREATE TABLE `OrganizadorEvento` (
-	`id_ano_evento` int NOT NULL,
+	`id_evento` int NOT NULL,
 	`id_organizador` int NOT NULL,
-	PRIMARY KEY (`id_ano_evento`,`id_organizador`)
+	PRIMARY KEY (`id_evento`,`id_organizador`)
 );
 
 CREATE TABLE `Tema` (
@@ -110,15 +99,13 @@ CREATE TABLE `PalavrasChave` (
 
 ALTER TABLE `Evento` ADD CONSTRAINT `Evento_fk0` FOREIGN KEY (`id_cadastrador`) REFERENCES `Usuario`(`id`);
 
-ALTER TABLE `AnoEvento` ADD CONSTRAINT `AnoEvento_fk0` FOREIGN KEY (`id_evento`) REFERENCES `Evento`(`id`);
-
-ALTER TABLE `OrganizadorEvento` ADD CONSTRAINT `OrganizadorEvento_fk0` FOREIGN KEY (`id_ano_evento`) REFERENCES `AnoEvento`(`id`);
+ALTER TABLE `OrganizadorEvento` ADD CONSTRAINT `OrganizadorEvento_fk0` FOREIGN KEY (`id_evento`) REFERENCES `Evento`(`id`);
 
 ALTER TABLE `OrganizadorEvento` ADD CONSTRAINT `OrganizadorEvento_fk1` FOREIGN KEY (`id_organizador`) REFERENCES `Organizador`(`id`);
 
 ALTER TABLE `TemaEvento` ADD CONSTRAINT `TemaEvento_fk0` FOREIGN KEY (`id_tema`) REFERENCES `Tema`(`id`);
 
-ALTER TABLE `TemaEvento` ADD CONSTRAINT `TemaEvento_fk1` FOREIGN KEY (`id_evento`) REFERENCES `AnoEvento`(`id`);
+ALTER TABLE `TemaEvento` ADD CONSTRAINT `TemaEvento_fk1` FOREIGN KEY (`id_evento`) REFERENCES `Evento`(`id`);
 
 ALTER TABLE `Artigo` ADD CONSTRAINT `Artigo_fk0` FOREIGN KEY (`id_tema`) REFERENCES `TemaEvento`(`id_tema`);
 
