@@ -8,13 +8,7 @@ requireValidSession(false); //n precisa de sessão
 $exception = null;
 $userData = [];
 
-//caso a página seja de update também
-/*if(!count($_POST) && isset($_GET['update'])){ //primeira vez que a página carrega
-    $user = Usuario::getOne(['id' => $_GET['update']]);//procura o usuário pelo id
-    $userData = $user->getValues();
-    $userData['password'] = null;
-} else*/
-    if (count($_POST) > 0){
+if (count($_POST) > 0){
     try {
 
         $entrada = [ //selecionar o que entra do post

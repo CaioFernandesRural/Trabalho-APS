@@ -16,7 +16,7 @@
         <div class="cadastro">
             <p class="titulo_cadastro">Dados de Cadastro</p>
             <form action="#" method="post">
-                <<input type="hidden" name="id" id="id" value="<?= $id ?>">
+                <input type="hidden" name="id" id="id" value="<?= $id ?>">
                 <div class="form_container">
                     <div class="div_form">
                         <label for="nome">Nome</label>
