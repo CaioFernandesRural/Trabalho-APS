@@ -115,15 +115,3 @@ ALTER TABLE `AutorArtigo` ADD CONSTRAINT `AutorArtigo_fk0` FOREIGN KEY (`id_auto
 ALTER TABLE `AutorArtigo` ADD CONSTRAINT `AutorArtigo_fk1` FOREIGN KEY (`id_artigo`) REFERENCES `Artigo`(`id`);
 
 ALTER TABLE `PalavrasChave` ADD CONSTRAINT `PalavrasChave_fk0` FOREIGN KEY (`id_artigo`) REFERENCES `Artigo`(`id`);
-
-
-
-
-
-
-
-
-
-
-
-

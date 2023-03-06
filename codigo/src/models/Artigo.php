@@ -1,172 +1,78 @@
 <?php
 
 namespace App\models;
+use ValidationException;
 
-class Artigo {
-    private $id;
+class Artigo extends Pessoa{
 
-    private $titulo;
+    protected static $tableName = 'artigo';
+    protected static $columns = [
+        'id',
+        'titulo',
+        'subtitulo',
+        'data_de_publicacao',
+        'idioma',
+        'resumo',
+        'num_paginas',
+        'num_downloads',
+        'doi',
+        'arquivo',
+        'id_tema',
+        'id_evento',
+    ];
 
-    private $subtitulo;
+    public function insert(){
 
-    private $descricao;
+        $this->Validate();
 
-    private $palavrasChave = array();
-
-    private $dataPublicacao;
-
-    private $arquivo;
-
-    private $idioma;
-
-    private $resumo;
-
-    private $numPaginas;
-
-    private $numDownloads;
-
-    private $edicao;
-
-    private $doi;
-
-    private $autores = array();
-
-    private $idEvento;
-
-
-    function __construct($id, $titulo, $subtitulo, $descricao, $palavrasChave, $dataPublicacao, $arquivo,
-    $idioma, $resumo, $numPaginas, $numDownloads, $edicao, $doi, $autores, $idEvento){
-        $this->id = $id;
-        $this->titulo = $titulo;
-        $this->subtitulo = $subtitulo;
-        $this->descricao = $descricao;
-        $this->palavrasChave[] = $palavrasChave;
-        $this->dataPublicacao = $dataPublicacao;
-        $this->arquivo = $arquivo;
-        $this->idioma = $idioma;
-        $this->resumo = $resumo;
-        $this->numPaginas = $numPaginas;
-        $this->numDownloads = $numDownloads;
-        $this->edicao = $edicao;
-        $this->doi = $doi;
-        $this->autores= $autores;
-        $this->idEvento = $idEvento;
+        return parent::insert();
     }
 
-    function getId() {
-        return $this->id;
+    public function update(){
+
+        $this->Validate();
+
+        return parent::update();
     }
 
-    function getTitulo() {
-        return $this->titulo;
-    }
+    private function Validate(){
+        $errors = [];
 
-    function getSubtitulo() {
-        return $this->subtitulo;
-    }
+        if(!$this->titulo){
+            $errors['titulo'] = 'titulo é Obrigatório';
+        }
 
-    function getDescricao() {
-        return $this->descricao;
-    }
+        if(!$this->subtitulo){
+            $errors['subtitulo'] = 'subtitulo é Obrigatório';
+        }
 
-    function getPalavrasChave() {
-        return $this->palavrasChave;
-    }
+        if(!$this->data_de_publicacao){
+            $errors['data_de_publicacao'] = 'Data de publicacao é Obrigatória';
+        }
 
-    function getDataPublicacao() {
-        return $this->dataPublicacao;
-    }
+        if(!$this->idioma){
+            $errors['idioma'] = 'Idioma é Obrigatório';
+        }
 
-    function getArquivo() {
-        return $this->arquivo;
-    }
-
-    function getIdioma() {
-        return $this->idioma;
-    }
-
-    function getResumo() {
-        return $this->resumo;
-    }
-
-    function getNumPaginas() {
-        return $this->numPaginas;
-    }
-
-    function getNumDownloads() {
-        return $this->numDownloads;
-    }
-
-    function getEdicao() {
-        return $this->edicao;
-    }
-
-    function getDoi() {
-        return $this->doi;
-    }
-
-    function getAutores() {
-        return $this->autores;
-    }
-
-    function getidEvento() {
-        return $this->idEvento;
-    }
-
-    function setTitulo($titulo) {
-        $this->titulo = $titulo;
-    }
-
-    function setSubtitulo($subtitulo) {
-        $this->subtitulo = $subtitulo;
-    }
-
-    function setDescricao($descricao) {
-        $this->descricao = $descricao;
-    }
-
-    function setPalavrasChave($palavra) {
-        $this->palavrasChave[] = $palavra;
-    }
-
-    function setDataPublicacao($dataPublicacao) {
-        $this->dataPublicacao =$dataPublicacao ;
-    }
-
-    function setArquivo($arquivo) {
-        $this-> arquivo= $arquivo;
-    }
-
-    function setIdioma($idioma) {
-        $this->idioma = $idioma;
-    }
-
-    function setResumo($resumo) {
-        $this->resumo = $resumo;
-    }
-
-    function setNumPaginas($numPaginas) {
-        $this->numPaginas = $numPaginas;
-    }
-
-    function setNumDownloads($numPaginas) {
-        $this->numPaginas = $numPaginas;
-    }
-
-    function setEdicao($edicao) {
-        $this->edicao = $edicao;
-    }
-
-    function setDoi($doi) {
-        $this->doi = $doi;
-    }
-
-    function setAutores($autores) {
-        $this->autores = $autores;
-    }
-
-    function setIdEvento($idEvento) {
-        $this->idEvento = $idEvento;
+        if(!$this->resumo){
+            $errors['resumo'] = 'Resumo do evento é Obrigatório';
+        }
+        
+        if(!$this->num_paginas){
+            $errors['num_paginas'] = 'Número de páginas Obrigatório';
+        }
+        
+        if(!$this->doi){
+            $errors['doi'] = 'doi é Obrigatório';
+        }
+        
+        if(!$this->arquivo){
+            $errors['arquivo'] = 'Arquivo é Obrigatório';
+        }
+        
+        if(count($errors)){
+            throw new ValidationException($errors);
+        }
     }
 
 }
