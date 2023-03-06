@@ -3,7 +3,7 @@
 use App\models\Usuario;
 
 session_start();
-requireValidSession(false); //n precisa de sessão
+#requireValidSession(false); //n precisa de sessão
 
 $exception = null;
 $userData = [];
