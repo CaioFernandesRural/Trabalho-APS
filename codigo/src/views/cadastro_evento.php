@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+     <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/cadastro.css"/>
     <title>Alexandria</title>
 </head>
 <body>
@@ -57,8 +58,8 @@
                             </div>
                         </div>    
                     </div>    
-                <button class="btn_cancela">Cancelar</button>
-                <button class="btn_salva">Enviar</button>
+                    <a href="/home.php"><button class="btn_cancela">Cancelar</button></a>
+                    <a href="/home.php"><button class="btn_salva">Enviar</button></a>
             </form>
         </div>
     </div>

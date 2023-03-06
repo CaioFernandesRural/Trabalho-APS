@@ -8,7 +8,7 @@
         <input type="text" id="barra_pesquisa" placeholder="Buscar">
         <img src="../assets/img/icon_lupa.png" id="icon_lupa">
     </label>
-    <img src="../assets/img/icon_person.png" id="icon_person">
+    <a href="/login.php"><img src="../assets/img/icon_person.png" id="icon_person"></a>
     <!-- Logado
     <img src="../../public/assets/img/logout.png" id="icon_logout">
 -->
