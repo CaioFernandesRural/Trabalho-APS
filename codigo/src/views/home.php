@@ -35,7 +35,7 @@
                     </label>
                     <label for="encontro">
                         <input type="checkbox" id="encontro" name="encontro">
-                    Encontro
+                        Encontro
                     </label>
                     <label for="painel">
                         <input type="checkbox" id="painel" name="painel">

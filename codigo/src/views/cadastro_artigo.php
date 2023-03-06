@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/cadastro.css"/>
     <title>Alexandria</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
 
         <p class="titulo_cadastro">Dados do Artigo</p>
         <div class="cadastro">
-            <form>
+            <form action="#" method="post">
                 <div class="form_container">
                     <div class="div_form">
                         <label for="titulo">Título</label>
@@ -28,9 +29,13 @@
                         <input type="text" id="idioma" name="idioma">
                         <br>
                         <label for="tema">Tema</label>
-                        <select name="tema" id="tema">
-                            <option value="tema_1">Tema 1</option>
-                        </select>
+                        <input type="checkbox" name="tema1" id="tema1" value="tema1">
+                        <label for="tema1"> Tema 1</label><br>
+                        <input type="checkbox" name="tema1" id="tema1" value="tema2">
+                        <label for="tema1"> Tema 2</label><br>
+                        <label for="outro">Outro</label>
+                        <input type="text" id="outro" name="outro">
+                        <br>
                     </div>
                     <div class="div_form">
                         <label for="doi">DOI</label>
@@ -52,10 +57,10 @@
                     <input type="text" id="descricao_artigo" name="descricao_artigo">
                 </div>    
             </div>
+            <a href="/home.php"><button class="btn_cancela">Cancelar</button></a>
+            <a href="/home.php"><button class="btn_salva">Enviar</button></a>
         </form>
     </div>    
-    <button class="btn_cancela">Cancelar</button>
-    <button class="btn_salva">Enviar</button>
 </div>
 </body>
 </html>

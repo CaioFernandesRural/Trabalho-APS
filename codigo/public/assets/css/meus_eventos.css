@@ -1,0 +1,30 @@
+.evento {
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 20px;
+    padding: 3%;
+    height: 90%;
+    width: 70%;
+}
+
+td.botoes_edicao{
+    display: flex;
+}
+
+table{
+    width: 100%;
+    gap: 2rem;
+}
+
+.btn_criar_novo{
+    background-color: #663399;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: .5rem 2rem;
+}
