@@ -12,7 +12,8 @@
 
         <p class="titulo_cadastro">Dados do Artigo</p>
         <div class="cadastro">
-            <form>
+            <form action="#" method="post">
+                <input type="hidden" name="id" value="<?= $id ?>">
                 <div class="form_container">
                     <div class="div_form">
                         <label for="titulo">Título</label>
@@ -21,15 +22,19 @@
                         <label for="subtitulo">Subtitulo</label>
                         <input type="text" name="subtitulo" id="subtitulo">
                         <br>
-                        <label for="data_artigo">Data de Publicação</label>
-                        <input type="date" id="data_artigo" name="data_artigo">
+                        <label for="data_de_publicacao">Data de Publicação</label>
+                        <input type="date" id="data_de_publicacao" name="data_de_publicacao">
                         <br>
                         <label for="idioma">Idioma</label>
                         <input type="text" id="idioma" name="idioma">
                         <br>
                         <label for="tema">Tema</label>
                         <select name="tema" id="tema">
-                            <option value="tema_1">Tema 1</option>
+                        <?php
+                            foreach($temas as $tema){
+                                echo "<option value='{$tema->id}' >{$tema->titulo}</option>";
+                            }
+                        ?>
                         </select>
                     </div>
                     <div class="div_form">
@@ -42,20 +47,16 @@
                     <label for="num_paginas">Número de Páginas</label>
                     <input type="number" id="num_paginas" name="num_paginas">
                     <br>
-                    <label for="edicao_artigo">Edição</label>
-                    <select name="edicao_artigo" id="edicao_artigo">
-                        <option value="edicao_1">Edição 1</option>
-                        <option value="edicao_2">Edição 2</option>
-                    </select>
-                    <br>
                     <label for="descricao_artigo">Descrição Sucinta</label>
-                    <input type="text" id="descricao_artigo" name="descricao_artigo">
-                </div>    
+                    <input type="text" id="descricao_artigo" name="resumo">
+                    <br>
+                    <input type="file" name="arquivo" id="arquivo">
+                </div>
             </div>
+        <button class="btn_cancela">Cancelar</button>
+        <button class="btn_salva">Enviar</button>
         </form>
-    </div>    
-    <button class="btn_cancela">Cancelar</button>
-    <button class="btn_salva">Enviar</button>
+    </div>
 </div>
 </body>
 </html>

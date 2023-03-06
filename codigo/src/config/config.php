@@ -3,7 +3,6 @@
 ini_set('display_errors', 0);
 error_reporting(E_ERROR | E_WARNING | E_PARSE);//desabilita alerta de variáveis indefinidas
 
-date_default_timezone_set('America/Sao_Paulo');
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
 
 //Constantes Gerais
@@ -24,5 +23,7 @@ require_once(realpath(dirname(__FILE__) . '/utils.php'));
 require_once(realpath(MODEL_PATH . '/Pessoa.php'));
 require_once(realpath(MODEL_PATH . '/Usuario.php'));
 require_once(realpath(MODEL_PATH . '/Evento.php'));
+require_once(realpath(MODEL_PATH . '/Artigo.php'));
+require_once(realpath(MODEL_PATH . '/Tema.php'));
 require_once(realpath(EXCEPTION_PATH . '/AppException.php'));
 require_once(realpath(EXCEPTION_PATH . '/ValidationException.php'));

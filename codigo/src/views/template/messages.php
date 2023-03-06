@@ -30,7 +30,7 @@ if($message['type'] === 'error'){
 <?php if(isset($message)): ?> 
 
 <div role="alert" 
-    class="" ><!--fazer a estilização da classe-->
+    class="<?=$alertType?>" ><!--fazer a estilização da classe-->
     <?= $message['message'] ?>
 </div>
 

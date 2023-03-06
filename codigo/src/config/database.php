@@ -26,6 +26,7 @@ class Database
     public static function executeSQL($sql){
         $conn = self::getConnection();
         if(!mysqli_query($conn, $sql)){
+            #var_dump(new Exception(mysqli_error($conn))); //teste
             throw new Exception(mysqli_error($conn));
         }
         $idCon = $conn->insert_id;

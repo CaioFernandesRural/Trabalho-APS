@@ -22,13 +22,12 @@ CREATE TABLE `Usuario` (
 CREATE TABLE `Evento` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
-    `tipo`  varchar(255) NOT NULL,
+    `tipo` enum('Congresso', 'Encontro', 'Seminário', 'Mesa-redonda', 'Simpósio', 'Painel', 'Fórum', 'Conferência', 'Jornada', 'Cursos', 'Colóquio', 'Semana', 'Workshop') NOT NULL,
 	`area_de_estudo` varchar(255) NOT NULL,
 	`id_cadastrador` int NOT NULL,
     `descricao` varchar(255) NOT NULL,
 	`link_evento` varchar(255) NOT NULL,
 	`autorizado` varchar(10) NOT NULL,
-    `ano` int NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -116,15 +115,3 @@ ALTER TABLE `AutorArtigo` ADD CONSTRAINT `AutorArtigo_fk0` FOREIGN KEY (`id_auto
 ALTER TABLE `AutorArtigo` ADD CONSTRAINT `AutorArtigo_fk1` FOREIGN KEY (`id_artigo`) REFERENCES `Artigo`(`id`);
 
 ALTER TABLE `PalavrasChave` ADD CONSTRAINT `PalavrasChave_fk0` FOREIGN KEY (`id_artigo`) REFERENCES `Artigo`(`id`);
-
-
-
-
-
-
-
-
-
-
-
-

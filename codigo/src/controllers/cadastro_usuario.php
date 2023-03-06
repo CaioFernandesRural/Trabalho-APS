@@ -34,6 +34,7 @@ if (count($_POST) > 0){
         $exception = $e;
     } finally{
         $userData = $_POST;
+        header("Location: home.php");
     }
 }
 
