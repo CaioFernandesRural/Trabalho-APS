@@ -29,7 +29,7 @@ if (count($_POST) > 0){
 
         $dbUser = new Artigo($entrada); //passando pro contructor os parâmetros do post
 
-        $dbUser->insert();
+        $dbUser->cadastrarArtigo();
         addSuccessMsg('Artigo cadastrado com sucesso');
         $_POST = [];
         header("Location: evento.php");
@@ -41,7 +41,7 @@ if (count($_POST) > 0){
     }
 }
 
-$temas = Tema::get();
+$temas = Tema::vizulizarListaDeTemas();
 
 loadTemplateView('cadastro_artigo', $userData + [
     'exception' => $exception,
