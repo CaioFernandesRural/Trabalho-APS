@@ -24,8 +24,11 @@
                             </div>
                             <label for="tipo">Tipo</label>
                             <select name="tipo" id="tipo">
-                                <option value="tipo_1">Tipo 1</option>
-                                <option value="tipo_2">Tipo 2</option>
+                            <?php
+                            foreach($eventos as $evento){
+                                echo "<option value='{$evento->tipo}' >{$evento->tipo}</option>";
+                            }
+                            ?>
                             </select>
                             <br>
                             <label for="area_de_estudo">Área de Estudo</label>
