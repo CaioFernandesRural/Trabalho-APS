@@ -1,5 +1,7 @@
 <?php
 session_start();
-#requireValidSession();
+requireValidSession();
+
+
 
 loadTemplateView('meus_eventos');

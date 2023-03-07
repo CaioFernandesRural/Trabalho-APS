@@ -26,15 +26,15 @@ if (count($_POST) > 0){
 
         $dbUser = new Usuario($entrada); //passando pro contructor os parâmetros do post
 
-        $dbUser->insert();
+        $dbUser->cadastrar();
         addSuccessMsg('Usuário cadastrado com sucesso');
         $_POST = [];
+        header("Location: home.php");
         
     } catch (Exception $e) {
         $exception = $e;
     } finally{
         $userData = $_POST;
-        header("Location: home.php");
     }
 }
 

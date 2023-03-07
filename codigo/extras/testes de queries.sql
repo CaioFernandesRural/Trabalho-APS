@@ -8,4 +8,4 @@ SELECT * FROM evento;
 
 ALTER TABLE Evento DROP COLUMN ano;*/
 
-SELECT * FROM evento;
+SELECT * FROM artigo;

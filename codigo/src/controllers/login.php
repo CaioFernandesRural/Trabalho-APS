@@ -16,7 +16,7 @@ if(count($_POST) > 0){ //se tiver algo no POST
     $login = new Usuario($entrada);
 
     try{
-        $user = $login->checkLogin();
+        $user = $login->autenticar();
         $_SESSION['user'] = $user;//seta usuário da sessão
         header("Location: home.php");//joga pra home
     } catch (AppException $e) {

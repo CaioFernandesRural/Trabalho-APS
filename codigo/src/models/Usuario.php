@@ -4,6 +4,7 @@ namespace App\models;
 
 use AppException;
 use ValidationException;
+use Database;
 
 class Usuario extends Pessoa {
 
@@ -22,23 +23,104 @@ class Usuario extends Pessoa {
         'admin'
     ];
 
-    public function insert(){
-        
+    //carrega o objeto a partir de um array, tenta trabalhar com valores "limpos"
+    public function loadFromArray($arr, $sanitize = true){
+        if ($arr){
+            #$conn = Database::getConnection();
+            foreach ($arr as $key => $value){
+                $cleanValue = $value;
+                if($sanitize && isset($cleanValue)){
+                    $cleanValue = strip_tags(trim($cleanValue));
+                    $cleanValue = htmlentities(trim($cleanValue));
+                    #$cleanValue = mysqli_real_escape_string($conn, $cleanValue);
+                }
+                $this->$key = $value;
+            }
+            #$conn->close();
+        }
+    }
+
+    public static function getOne($filters, $columns = '*'){
+
+        $class = get_called_class(); //nome da classe que chamou o método
+        $result = static::getResultSetFromSelect($filters, $columns);
+
+        return $result ? new $class($result->fetch_assoc()) : null;
+    }
+
+    public static function get($filters = [], $columns = '*'){
+        $objects = [];
+        $result = static::getResultSetFromSelect($filters, $columns);
+
+        if($result){
+            $class = get_called_class();
+            while($row = $result->fetch_assoc()){
+                array_push($objects, new $class($row));
+            }
+        }
+        return $objects;
+    }
+
+    public static function getResultSetFromSelect($filters = [], $columns = '*'){
+        $sql = "SELECT {$columns} FROM " .
+        static::$tableName .
+        static::getFilters($filters);
+
+        $result = Database::getResultFromQuery($sql);
+        if($result->num_rows == 0){
+            return NULL;
+        } else {
+            return $result;
+        }
+    }
+
+    public function cadastrar(){
+
         $this->Validate();
         $this->admin = $this->admin ? 1 : 0;
         
         #$this->senha = password_hash($this->senha, PASSWORD_DEFAULT);
         //encripta a senha
-        return parent::insert();
+
+        $sql = "INSERT INTO " . static::$tableName . " (" //inserir na TABELA x
+            . implode(",", static::$columns) . ") VALUES (";//COLUNAS tais
+        foreach(static::$columns as $col){
+            $sql .= static::getFormatedValue($this->$col) . ",";//VALORES formatados retornados
+        }
+        
+        $sql[strlen($sql) - 1] = ")";
+        $id = Database::executeSQL($sql);
+        $this->id = $id;
+
+        //insere o OBJETO no banco.
     }
 
-    public function update(){
+    public static function deleteByID($id){
+        $sql = "DELETE FROM " . static::$tableName . " WHERE id = {$id}";
+        Database::executeSQL($sql);
+    }
 
-        $this->Validate();
-        $this->is_admin = $this->is_admin ? 1 : 0;
+    private static function getfilters($filters){ //insere os filtros na query
+        $sql = '';
+        if(count($filters) > 0){
+            $sql .= " WHERE 1 = 1";
+            foreach($filters as $column => $value){
+                if($column == 'raw'){
+                    $sql .= " AND {$value}";
+                } else {
+                    $sql .= " AND {$column} = " . static::getFormatedValue($value);
+                }
+            }
+        }
+        return $sql;
+    }
 
-        $this->senha = password_hash($this->senha, PASSWORD_DEFAULT);
-        return parent::update();
+    private static function getFormatedValue($value){ //formata strings para o sql
+        if (is_null($value)){
+            return "null";
+        } else {
+            return "'{$value}'";
+        }
     }
 
     public function validateLogin(){
@@ -56,7 +138,7 @@ class Usuario extends Pessoa {
         }
     }
 
-    public function checkLogin(){
+    public function autenticar(){
         $this->validateLogin();
         $user = Usuario::getOne(['email' => $this->email]);
 
