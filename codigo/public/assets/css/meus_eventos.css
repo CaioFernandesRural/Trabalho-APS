@@ -5,7 +5,7 @@
     gap: 15px;
     border-radius: 20px;
     padding: 3%;
-    height: 90%;
+    margin-top: 5%;
     width: 70%;
 }
 
@@ -30,11 +30,9 @@ table{
 }
 
 .container_botoes {
-    position: absolute;
-    left: 105%;
-    top: 50%;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    margin-top: .5rem;
 }
 
 ul{
@@ -46,4 +44,11 @@ ul{
 li{
     display: flex;
     gap: 5%;
+}
+
+#decisao_evento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
