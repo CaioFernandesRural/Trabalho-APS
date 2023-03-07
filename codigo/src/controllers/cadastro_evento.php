@@ -3,7 +3,7 @@
 use App\models\Evento;
 
 session_start();
-//requireValidSession();
+requireValidSession();
 
 $exception = null;
 $userData = [];
