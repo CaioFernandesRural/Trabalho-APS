@@ -1,5 +1,5 @@
 <?php
-/*
+
 function requireValidSession($requiresAdmin = false){
     $user = $_SESSION['user'];
 
@@ -12,4 +12,3 @@ function requireValidSession($requiresAdmin = false){
         exit();
     }
 }
-*/
