@@ -3,7 +3,7 @@
 use App\models\Evento;
 
 session_start();
-#requireValidSession();
+requireValidSession();
 
 $exception = null;
 $userData = [];
@@ -36,4 +36,9 @@ if (count($_POST) > 0){
     }
 }
 
-loadTemplateView('cadastro_evento', $userData + ['exception' => $exception]);
+$eventos = Evento::vizulizarListaDeEventos();
+
+loadTemplateView('cadastro_evento', $userData + [
+    'exception' => $exception,
+    'eventos' => $eventos
+]);
