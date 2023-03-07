@@ -20,7 +20,7 @@
         </div>
         <div class="visualiza_eventos">
             <div class="cards">
-                <div class="decisao">
+                <div id="decisao_evento">
                     <div class="evento">
                         <a href="evento.php">
                             <p class="nome_evento">Piscitacídeos e Sua Criação em Cativeiro</p>
@@ -127,8 +127,8 @@
                         <button type="button" class="autorizacao" id="deleta_evento1_evento1"><img class="icon_button"
                                 src="/assets/img/deleta.svg"></button>
                     </div>
-                </div>
-                <div class="decisao">
+               
+                
                     <div class="evento">
                         <a href="">
                             <p class="nome_evento">Aquarismo no Brasil</p>
@@ -200,8 +200,7 @@
                         <button type="button" class="autorizacao" id="deleta_evento2_evento2"><img class="icon_button"
                                 src="/assets/img/deleta.svg"></button>
                     </div>
-                </div>
-                <div class="decisao">
+                
                     <div class="evento">
                         <a href="">
                             <p class="nome_evento">Semana da Engenharia de Software</p>
@@ -266,12 +265,15 @@
                         </table>
                     </div>
                     <div class="container_botoes">
-                        <a href="/cadastro_evento.php"><button type="button" class="autorizacao" id="edita_evento2"><img
-                                    class="icon_button" src="/assets/img/lapis.svg"></button></a>
+                        <a href="/cadastro_evento.php">
+                            <button type="button" class="autorizacao" id="edita_evento3">
+                                <img class="icon_button" src="/assets/img/lapis.svg">
+                            </button>
+                        </a>
                         <button type="button" class="autorizacao" id="deleta_evento2"><img class="icon_button"
                                 src="/assets/img/deleta.svg"></button>
                     </div>
-                </div>
+                
             </div>
         </div>
     </div>

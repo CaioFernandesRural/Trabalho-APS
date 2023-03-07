@@ -5,7 +5,7 @@ use App\models\Pessoa;
 use App\models\Tema;
 
 session_start();
-requireValidSession();
+//requireValidSession();
 
 $exception = null;
 $userData = [];
