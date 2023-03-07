@@ -4,7 +4,7 @@ use App\models\Evento;
 use App\models\Tema;
 
 session_start();
-//requireValidSession();
+requireValidSession();
 
 $eventos = Evento::vizulizarListaDeEventos();
 #$temas = [];
