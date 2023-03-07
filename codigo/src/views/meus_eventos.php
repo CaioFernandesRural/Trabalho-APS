@@ -20,105 +20,44 @@
         </div>
         <div class="visualiza_eventos">
             <div class="cards">
-                <div id="decisao_evento">
+                <div class="decisao">
+                <?php foreach($eventos as $evento) :?>
                     <div class="evento">
                         <a href="evento.php">
-                            <p class="nome_evento">Piscitacídeos e Sua Criação em Cativeiro</p>
+                            <p class="nome_evento"><?= $evento->nome ?></p>
                         </a>
-                        <table>
-                            <tr>
-                                <th><span>Artigos</span></th>
-                                <th></th>
-                                <th><span>Temas</span></th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>Artigo 1</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo1_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button></a>
-                                    <button type="button" class="autorizacao" id="deleta_artigo1_evento1"><img
-                                            class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button>
-                                </td>
-                                <td>Tema 1</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema1_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button></a>
-                                    <button type="button" class="autorizacao" id="deleta_tema1_evento1"><img
-                                            class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Artigo 2</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo2_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_artigo2_evento1"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                                <td>Tema 2</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema2_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_tema2_evento1"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Artigo 3</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo3_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_artigo3_evento1"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                                <td>Tema 3</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema3_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_tema3_evento1"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Artigo 4</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo4_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_artigo4_evento1"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                                <td>Tema 4</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema4_evento1"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_tema4_evento1"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="/cadastro_artigo.php"><button class="btn_criar_novo">Criar Artigo</button></a></td>
-                                <td>
-                                </td>
-                                <td><a href="/cadastro_tema.php"><button class="btn_criar_novo">Criar Tema</button></a></td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
+                        <span>Tema 1</span>
+                        <ul>
+                            <li>Artigo 1</li>
+                            <li><a href="cadastro_artigo.php?editar=true"><button type="button" class="autorizacao" id="edita_artigo1_tema1_evento1"><img class="icon_button" src="/assets/img/lapis.svg" title="Autorizar"></button></a>
+                            <button type="button" class="autorizacao" id="deleta_artigo1_tema1_evento1"><img class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button></li>
+                        </ul>
+                        <ul>
+                            <li>Artigo 2</li>
+                            <li><a href="/cadastro_artigo.php?editar=true"><button type="button" class="autorizacao" id="edita_artigo2_tema1_evento1"><img class="icon_button" src="/assets/img/lapis.svg" title="Autorizar"></button></a>
+                            <button type="button" class="autorizacao" id="deleta_artigo1_tema2_evento1"><img class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button></li>
+                        </ul>
+                        <ul>
+                            <li>Artigo 3</li>
+                            <li><a href="/cadastro_artigo.php?editar=true"><button type="button" class="autorizacao" id="edita_artigo1_tema3_evento1"><img class="icon_button" src="/assets/img/lapis.svg" title="Autorizar"></button></a>
+                            <button type="button" class="autorizacao" id="deleta_artigo3_tema1_evento1"><img class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button></li>
+                        </ul>
+                        <ul>
+                            <li>Artigo 4</li>
+                            <li><a href="/cadastro_artigo.php?editar=true"><button type="button" class="autorizacao" id="edita_artigo4_tema1_evento1"><img class="icon_button" src="/assets/img/lapis.svg" title="Autorizar"></button></a>
+                            <button type="button" class="autorizacao" id="deleta_artigo4_tema1_evento1"><img class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button></li>
+                        </ul>
+                        <span>Tema 2</span>
+                        <ul>
+                            <li>Artigo 1</li>
+                            <li><a href="/cadastro_artigo.php?editar=true"><button type="button" class="autorizacao" id="edita_artigo1_tema2_evento1"><img class="icon_button" src="/assets/img/lapis.svg" title="Autorizar"></button></a>
+                            <button type="button" class="autorizacao" id="deleta_artigo1_tema2_evento1"><img class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button></li>
+                        </ul>
+                        <ul>
+                            <li>Artigo 2</li>
+                            <li><a href="/cadastro_artigo.php?editar=true"><button type="button" class="autorizacao" id="edita_artigo2_tema2_evento1"><img class="icon_button" src="/assets/img/lapis.svg" title="Autorizar"></button></a>
+                            <button type="button" class="autorizacao" id="deleta_artigo1_tema2_evento1"><img class="icon_button" src="/assets/img/deleta.svg" title="deletar"></button></li>
+                        </ul>
                     </div>
                     <div class="container_botoes">
                         <a href="/cadastro_evento.php"><button type="button" class="autorizacao"
@@ -127,153 +66,7 @@
                         <button type="button" class="autorizacao" id="deleta_evento1_evento1"><img class="icon_button"
                                 src="/assets/img/deleta.svg"></button>
                     </div>
-               
-                
-                    <div class="evento">
-                        <a href="">
-                            <p class="nome_evento">Aquarismo no Brasil</p>
-                        </a>
-                        <table>
-                            <tr>
-                                <th><span>Artigos</span></th>
-                                <th></th>
-                                <th><span>Temas</span></th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>Artigo 1</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo1_evento2"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_artigo1_evento2"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                                <td>Tema 1</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema1_evento2"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_tema1_evento2"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Artigo 2</td>
-                                <td class="botoes_edicao">
-
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo2_evento2"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_artigo2_evento2"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-
-                                </td>
-                                <td>Tema 2</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema2_evento2"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_tema2_evento2"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="/cadastro_artigo.php"><button class="btn_criar_novo">Criar Artigo</button></a></td>
-                                <td>
-                                </td>
-                                <td><a href="/cadastro_tema.php"><button class="btn_criar_novo">Criar Tema</button></a></td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="container_botoes">
-                        <a href="/cadastro_evento.php"><button type="button" class="autorizacao"
-                                id="edita_evento2_evento2"><img class="icon_button"
-                                    src="/assets/img/lapis.svg"></button></a>
-                        <button type="button" class="autorizacao" id="deleta_evento2_evento2"><img class="icon_button"
-                                src="/assets/img/deleta.svg"></button>
-                    </div>
-                
-                    <div class="evento">
-                        <a href="">
-                            <p class="nome_evento">Semana da Engenharia de Software</p>
-                        </a>
-                        <table>
-                            <tr>
-                                <th><span>Artigos</span></th>
-                                <th></th>
-                                <th><span>Temas</span></th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>Artigo 1</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo1_evento3"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_artigo1_evento3"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                                <td>Tema 1</td>
-                                <td class="botoes_edicao">
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema1_evento3"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_tema1_evento3"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Artigo 2</td>
-                                <td class="botoes_edicao">
-
-                                    <a href="/cadastro_artigo.php"><button type="button" class="autorizacao"
-                                            id="edita_artigo2_evento3"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_artigo2_evento3"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                                <td>Tema 2</td>
-                                <td class="botoes_edicao">
-
-                                    <a href="/cadastro_tema.php"><button type="button" class="autorizacao"
-                                            id="edita_tema2_evento3"><img class="icon_button"
-                                                src="/assets/img/lapis.svg" title="Autorizar"></button>
-                                        <button type="button" class="autorizacao" id="deleta_tema2_evento3"><img
-                                                class="icon_button" src="/assets/img/deleta.svg"
-                                                title="deletar"></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="/cadastro_artigo.php"><button class="btn_criar_novo">Criar Artigo</button></a></td>
-                                <td>
-                                </td>
-                                <td><a href="/cadastro_tema.php"><button class="btn_criar_novo">Criar Tema</button></a></td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="container_botoes">
-                        <a href="/cadastro_evento.php">
-                            <button type="button" class="autorizacao" id="edita_evento3">
-                                <img class="icon_button" src="/assets/img/lapis.svg">
-                            </button>
-                        </a>
-                        <button type="button" class="autorizacao" id="deleta_evento2"><img class="icon_button"
-                                src="/assets/img/deleta.svg"></button>
-                    </div>
-                
+                <?php endforeach ?>
             </div>
         </div>
     </div>
