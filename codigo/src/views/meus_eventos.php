@@ -15,6 +15,9 @@
 
         <h1 id="h1_edita">Meus Eventos</h1>
         <a href="/cadastro_evento.php"><button class="btn_criar_novo">Criar Evento</button></a>
+        <div id="titulo_editar">
+            <p>Editar | Deletar</p>
+        </div>
         <div class="visualiza_eventos">
             <div class="cards">
                 <div class="decisao">
@@ -61,17 +64,9 @@
                                 id="edita_evento1_evento1"><img class="icon_button"
                                     src="/assets/img/lapis.svg"></button></a>
                         <button type="button" class="autorizacao" id="deleta_evento1_evento1"><img class="icon_button"
-                            src="/assets/img/deleta.svg"></button>
+                                src="/assets/img/deleta.svg"></button>
                     </div>
                 <?php endforeach ?>
-                    <div class="container_botoes">
-                        <a href="/cadastro_evento.php"><button type="button" class="autorizacao"
-                                id="edita_evento1_evento1"><img class="icon_button"
-                                    src="/assets/img/lapis.svg"></button></a>
-                        <button type="button" class="autorizacao" id="deleta_evento1_evento1"><img class="icon_button"
-                            src="/assets/img/deleta.svg"></button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
