@@ -28,3 +28,22 @@ table{
     cursor: pointer;
     padding: .5rem 2rem;
 }
+
+.container_botoes {
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    display: flex;
+    gap: 2rem;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+li{
+    display: flex;
+    gap: 5%;
+}
