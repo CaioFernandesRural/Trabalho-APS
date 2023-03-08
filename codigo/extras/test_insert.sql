@@ -2,7 +2,7 @@
 INSERT INTO Usuario (nome, email, senha, tipo_usuario, telefone, instituicao, link_lattes, sexo, cpf, admin)
 VALUES
 ("João Silva", "joaosilva@email.com", "q2w3e4r5t6y7u8i", "comum", "11999999999", "Universidade X", "http://lattes.com/joaosilva", "masc", "12345678910", 0),
-("Maria Luíza", "marialuiza@email.com", "a2s3d4f5g6h7j8k9", "cad", "11988888888", "Universidade Y", "http://lattes.com/marialuiza", "fem", "109876543210", 0),
+("Maria Luíza", "marialuiza@email.com", "a2s3d4f5g6h7j8k9", "adm", "11988888888", "Universidade Y", "http://lattes.com/marialuiza", "fem", "109876543210", 0),
 ("Lucas Oliveira", "lucasoliveira@email.com", "1z2x3c4v5b67n8m9", "comum", "11977777777", "Universidade Z", "http://lattes.com/lucasoliveira", "masc", "321098765410", 0),
 ("Ana Paula", "anapaula@email.com", "o9i8u7y6t5r4e32w", "comum", "11966666666", "Universidade A", "http://lattes.com/anapaula", "fem", "654321098710", 0),
 ("Ricardo Fernandes", "ricardofernandes@email.com", "0l9k8j7h6g5f4d3s2a", "cad", "11955555555", "Universidade B", "http://lattes.com/ricardofernandes", "masc", "987654321510", 0),

@@ -13,15 +13,27 @@
     <img src="../../public/assets/img/logout.png" id="icon_logout">
 -->
 </header>
-<!-- Administrador
-<nav>
-    <a href="">Autorizações Pendentes</a>
-    <a href="">Eventos</a>
-</nav>  
--->
-<!-- Cadastrador
-<nav>
-    <a href="">Meus Eventos</a>
-    <a href="">Eventos</a>
-</nav>  
--->
+<?php
+if ($_SESSION['user']->tipo_usuario == 'comum'):
+    ?>
+    <nav>
+        <a href="meus_eventos.php">Meus eventos</a>
+    </nav>
+
+<?php endif ?>
+<?php
+if ($_SESSION['user']->tipo_usuario == 'cad'):
+    ?>
+    <nav>
+        <a href="meus_eventos.php">Meus Eventos</a>
+    </nav>
+<?php endif ?>
+
+<?php
+if ($_SESSION['user']->tipo_usuario == 'adm'):
+    ?>
+    <nav>
+        <a href="autorizacoes_pendentes.php">Autorizações Pendentes</a>
+    </nav>
+
+<?php endif ?>
