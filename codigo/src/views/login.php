@@ -39,7 +39,7 @@
                 </div>
             </form>
             <div class="inscreva-se">
-                <p>Não tem uma conta? <a>Inscreva-se</a></p>
+                <p>Não tem uma conta? <a href="cadastro_usuario.php">Inscreva-se</a></p>
             </div>
         </div>
     </div>
